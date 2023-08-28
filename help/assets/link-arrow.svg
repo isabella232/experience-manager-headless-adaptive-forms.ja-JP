@@ -1,0 +1,9 @@
+<svg id="Action_button" data-name="Action button" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="Placement_Area" data-name="Placement Area" width="32" height="32" fill="red" opacity="0"/>
+  <rect id="Background" width="32" height="32" rx="4" fill="rgba(255,0,0,0)"/>
+  <g id="Icon">
+    <rect id="Canvas" width="18" height="18" transform="translate(7 7)" fill="#747474" opacity="0"/>
+    <path id="Path_82739" data-name="Path 82739" d="M16.5,1H1.5a.5.5,0,0,0-.5.5v7a.5.5,0,0,0,.5.5h1A.5.5,0,0,0,3,8.5V3H15V15H9.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5h7a.5.5,0,0,0,.5-.5V1.5A.5.5,0,0,0,16.5,1Z" transform="translate(7 7)" fill="#747474"/>
+    <path id="Path_82740" data-name="Path 82740" d="M9.318,13.882A.391.391,0,0,0,9.6,14a.4.4,0,0,0,.4-.377V8.25A.25.25,0,0,0,9.75,8H4.377A.4.4,0,0,0,4,8.4a.392.392,0,0,0,.117.28L6.01,10.573,1.49,15.1a.5.5,0,0,0,0,.707h0l.707.707a.5.5,0,0,0,.707,0L7.425,11.99Z" transform="translate(7 7)" fill="#747474"/>
+  </g>
+</svg>
