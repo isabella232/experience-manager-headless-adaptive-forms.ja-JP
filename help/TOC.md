@@ -1,38 +1,38 @@
 ---
-user-guide-title: Adobe Experience Managerヘッドレスアダプティブフォーム
-breadcrumb-title: AEMヘッドレスアダプティブフォーム
-user-guide-description: Adobe Experience Managerヘッドレスアダプティブフォームのドキュメント
+user-guide-title: Adobe Experience Manager ヘッドレスアダプティブフォーム
+breadcrumb-title: AEM ヘッドレスアダプティブフォーム
+user-guide-description: Adobe Experience Manager ヘッドレスアダプティブフォームのドキュメント
 feature: Adaptive Forms
 role: Developer
 hide: false
 source-git-commit: b1e62aa73d5f442c8d025202f3bad31c0f82a113
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '137'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Managerヘッドレスアダプティブフォーム {#using}
+# Adobe Experience Manager ヘッドレスアダプティブフォーム {#using}
 
 + [概要](overview.md)
 + [アーキテクチャ](architecture.md)
 + クイックセットアップ {#quick-setup}
-   + [AEM 6.5 FormsでのヘッドレスアダプティブFormsの有効化](enable-headless-adaptive-forms-and-core-components.md)
-   + [AEM Formsas a Cloud ServiceのヘッドレスアダプティブFormsを有効にする](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md)
+   + [AEM 6.5 Forms でのヘッドレスアダプティブフォームの有効化](enable-headless-adaptive-forms-and-core-components.md)
+   + [AEM Forms as a Cloud Service でのヘッドレスアダプティブフォームの有効化](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md)
 + チュートリアル {#tutorial}
-   + [コアコンポーネントとヘッドレスアダプティブForms on AEM Formsas a Cloud Serviceを使用して、エンゲージメントFormsを構築](build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service.md)
-   + [コアコンポーネントとヘッドレスアダプティブForms(AEM 6.5 Forms) を使用したエンゲージメントFormsの構築](build-engaging-forms-using-core-components-and-headless-adaptive-forms-on-aem-65-forms.md)
-+ スターターキットの使用を開始する{#get-started}
+   + [AEM Forms as a Cloud Service 上でコアコンポーネントとヘッドレスアダプティブフォームを使用して魅力的なフォームを作成する方法](build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service.md)
+   + [AEM 6.5 Forms 上でコアコンポーネントとヘッドレスアダプティブフォームを使用して魅力的なフォームを作成する方法](build-engaging-forms-using-core-components-and-headless-adaptive-forms-on-aem-65-forms.md)
++ スターターキット使用の基本を学ぶ{#get-started}
    + [スターターキットを使用したヘッドレスフォームの作成と公開](create-and-publish-a-headless-form.md)
    + [カスタム React ライブラリを使用したヘッドレスフォームのレンダリング](use-google-material-ui-react-components-to-render-a-headless-form.md)
 + ヘッドレスアダプティブフォームの作成 {#authoring-headless-adaptive-forms}
-   + [アダプティブフォームエディターを使用したヘッドレスアダプティブフォームの作成Forms](create-a-headless-adaptive-form.md)
+   + [アダプティブフォームエディターを使用したヘッドレスアダプティブフォームの作成](create-a-headless-adaptive-form.md)
 + 開発者向けリファレンス {#developer-reference}
    + [ヘッドレスアダプティブフォーム API](https://opensource.adobe.com/aem-forms-af-runtime/api/)
 + [よくある質問](faq.md)
 + [トラブルシューティング](troubleshooting.md)
-+ [ヘッドレスアダプティブフォーム用のMicrosoft Visual Studio Code 拡張機能](visual-studio-code-extension-for-headless-adaptive-forms.md)
++ [ヘッドレスアダプティブフォーム用の Microsoft Visual Studio Code 拡張機能](visual-studio-code-extension-for-headless-adaptive-forms.md)
 
 
 

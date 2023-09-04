@@ -6,21 +6,21 @@ feature: Adaptive Forms
 topic: Headless
 role: Admin, Developer
 level: Beginner, Intermediate
-keywords: ヘッドレス，アダプティブフォーム， FAQ
+keywords: ヘッドレス, アダプティブフォーム, FAQ
 hide: false
 exl-id: 5bfc307d-96a3-4007-b65f-32176ecdb710
 source-git-commit: 47ac7d03c8c4fa18ac3bdcef04352fdd1cad1b16
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '429'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # よくある質問（FAQ） {#headless-adaptive-forms-faq}
 
-## ヘッドレスアダプティブフォームを使用する場合、React.js を知っておく必要はありますか？
+## ヘッドレスアダプティブフォームを使用するには React.js の知識が必要ですか？
 
-任意のフレームワーク、ライブラリ、または言語を使用してヘッドレスアダプティブフォームをレンダリングし、アドビの REST API を使用してフォームを検証および送信することができます。 OOTB が提供する AF-core ライブラリは、フレームワークに依存しません。 OOTB が提供する React-Render ライブラリと React-component ライブラリは、ご利用の際に便利です。 独自のコンポーネントを開発することができ、これらのコンポーネントの使用に制限されません。
+任意のフレームワーク、ライブラリまたは言語を使用してヘッドレスアダプティブフォームをレンダリングし、REST API を使用してフォームを検証および送信できます。標準提供の AF コアライブラリは、フレームワークに依存しません。標準提供の React Render および React コンポーネントライブラリは、参考までに提供されています。独自のコンポーネントを開発でき、これらのライブラリには限定されません。
 
 <!-- 
 ## Did Adobe release a new AEM Archetype for Headless adaptive forms?
@@ -29,9 +29,9 @@ You can use Archetype 37 with flag `includeFormsheadless` or later flag to creat
 
 -->
 
-## ヘッドレスアダプティブフォームを使用するには、Formsas a Cloud Serviceサンドボックスが必要ですか？
+## ヘッドレスアダプティブフォームを使用するには、Forms as a Cloud Service サンドボックスが必要ですか？
 
-スターターアプリを使用して、ヘッドレスアダプティブフォームの開発とスタイル設定を開始できます。 ヘッドレスアダプティブフォームのホストと提供には、Formsがas a Cloud Service的に、バックエンドフォームの機能と共に必要です。
+スターターアプリを使用して、ヘッドレスアダプティブフォームの開発とスタイル設定を開始できます。バックエンドのフォーム機能とともにヘッドレスアダプティブフォームをホストし提供するには、Forms as a Cloud Service が必要です。
 
 <!-- ## Do I need an archetype project to develop Headless adaptive forms?
 
@@ -40,30 +40,30 @@ archetype project to deploy the finished Headless adaptive forms and correspondi
 
 ## ヘッドレスアダプティブフォームのプレビューはどこで入手できますか？ {#storybook-example}
 
-スターターアプリを使用すると、カスタムのヘッドレスアダプティブフォームをレンダリングおよびプレビューできます。 また、 [ストーリーブック](https://opensource.adobe.com/aem-forms-af-runtime/storybook/?path=/story/reference-examples--introduction) ヘッドレスアダプティブフォームのプレビュー例
+スターターアプリを使用して、カスタムのヘッドレスアダプティブフォームをレンダリングしプレビューできます。[ストーリーブック](https://opensource.adobe.com/aem-forms-af-runtime/storybook/?path=/story/reference-examples--introduction)の例を変更して、ヘッドレスアダプティブフォームをプレビューすることもできます。
 
 ![](/help/assets/storybook-example.png)
 
-## カスタムフレームワークでヘッドレスアダプティブフォームを使用することは可能ですか？
+## カスタムフレームワークでヘッドレスアダプティブフォームを使用することはできますか？
 
-ヘッドレスアダプティブフォームは、 [標準仕様](/help/assets/Headless-Adaptive-Form-Specification.pdf). 仕様を拡張して、カスタムコンポーネントを構築できます。 例えば、Chakra UI、Vue.js などのコンポーネントを使用できます。
+ヘッドレスアダプティブフォームは[標準仕様](/help/assets/Headless-Adaptive-Form-Specification.pdf)に基づいています。仕様を拡張して、カスタムコンポーネントの構築に使用できます。例えば、Chakra UI、Vue.js などのコンポーネントです。
 
 ## ヘッドレスアダプティブフォームはカスケードフィールドをサポートしていますか？
 
-カスケードフィールドでは、2 番目のフィールドの内容は、最初のフィールドで選択した内容に応じて異なります。 The [Storybook](https://opensource.adobe.com/aem-forms-af-runtime/storybook/?path=/story/adaptive-form-dynamic-behavior—options&amp;args=formJson.items[0].fieldType:drop-down;formJson.items[0].minimum:!undefined;formJson.items[0].maximum:!undefined;formJson.items[0].value:Choose+number+of+options;formJson.items[0].0].0]:1;formJsonitems[0].enum[1]:2;formJson.items[0].enum[2]:3;formJson.items[1].fieldType:drop-down) に、カスケードフィールドの例を示します。
+カスケードフィールドでは、2 番目のフィールドの内容は、最初のフィールドで選択された内容に依存します。カスケードフィールドの例が[ストーリーブック](https://opensource.adobe.com/aem-forms-af-runtime/storybook/?path=/story/adaptive-form-dynamic-behaviour--options&amp;args=formJson.items[0].fieldType:drop-down;formJson.items[0].minimum:!undefined;formJson.items[0].maximum:!undefined;formJson.items[0].label.value:Choose+number+of+options;formJson.items[0].enum[0]:1;formJson.items[0].enum[1]:2;formJson.items[0].enum[2]:3;formJson.items[1].fieldType:drop-down)に含まれています。
 
-## ヘッドレスアダプティブフォームでは、パーソナライズされたデータを使用したフォームの事前入力が可能ですか？
+## ヘッドレスアダプティブフォームでは、パーソナライズされたデータをフォームに事前入力できますか？
 
-ヘッドレスアダプティブフォームを使用すると、パーソナライズされたデータをフォームに事前入力できます。 The [Storybook](https://opensource.adobe.com/aem-forms-af-runtime/storybook/?path=/story/reference-examples--prefill-form-with-personalised-data) に、ヘッドレスアダプティブフォームの事前入力方法の例を示します。
+ヘッドレスアダプティブフォームを使用すると、パーソナライズされたデータをフォームに事前入力できます。ヘッドレスアダプティブフォームに事前入力する方法の例が[ストーリーブック](https://opensource.adobe.com/aem-forms-af-runtime/storybook/?path=/story/reference-examples--prefill-form-with-personalised-data)に含まれています。
 
 <!-- >
 ## Can I use existing Adaptive Forms editor to create a Headless adaptive form?
 
 At this moment, you use the Adaptive Form Editor to specify the JSON structure and set submit action for the forms. Support for drag-and-drop components, applying rules using editor, and more editor-related options would be available later in the beta phase. Keep a watch on release notes.  -->
 
-## ヘッドレスアダプティブフォームをAngularSPAで使用することはできますか？
+## Angular SPA でヘッドレスアダプティブフォームを使用できますか？
 
-Web SDK を使用して、ヘッドレスアダプティブフォームを Web SPAとAngularで統合できます。 どのフレームワークとも独立しています。 React SDK を参照として使用できます。
+Web SDK を使用して、ヘッドレスアダプティブフォームを Angular SPA と統合できます。どのようなフレームワークにも依存しません。React SDK を参照用に使用できます。
 
 <!-- ## Should the `-r prerelease` switch be used every time to start the AEM SDK instance or only for the first time?
 
@@ -80,10 +80,10 @@ You do not require a license.properties file to run AEM Cloud Service SDK.
 
 -->
 
-## ヘッドレス AF の開発を容易にするプラグインはありますか？
+## ヘッドレス AF を開発しやすくなるプラグインはありますか？
 
-はい、Microsoft Visual Studio Code で拡張機能を使用できます。 これにより、ヘッドレスアダプティブフォーム JSON を手動で作成する便利な方法が提供されます。
+はい、Microsoft Visual Studio Code の拡張機能を利用できます。ヘッドレスアダプティブフォーム JSON を手動で作成する便利な方法が用意されています。
 
-## ヘッドレスアダプティブフォームは、任意の CRM に接続して、データの読み取りや書き込みを行うことはできますか？
+## ヘッドレスアダプティブフォームを CRM に接続してデータを読み書きできますか？
 
-Microsoft Dynamics と Salesforce を使用して、ヘッドレスアダプティブフォームを送信したり、事前入力したりできます。 ヘッドレスアダプティブフォームは、CRM 以外にも、REST エンドポイント、電子メール、カスタム送信アクションを使用した送信または事前入力をサポートします。
+Microsoft Dynamics や Salesforce を使用して、ヘッドレスアダプティブフォームを送信または事前入力できます。CRM とは別に、ヘッドレスアダプティブフォームでは、REST エンドポイント、メールおよびカスタム送信アクションを使用した送信または事前入力をサポートしています。
