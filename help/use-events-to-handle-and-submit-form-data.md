@@ -1,20 +1,20 @@
 ---
-title: イベントを使用して、フォームのヘッドレスアダプティブフォームデータを処理して送信する
-description: イベントを使用して、フォームのヘッドレスアダプティブフォームデータを処理して送信する
+title: イベントを使用したフォームのヘッドレスアダプティブフォームデータの処理と送信
+description: イベントを使用したフォームのヘッドレスアダプティブフォームデータの処理と送信
 hide: false
 source-git-commit: ddd353329dfe5b47734d904b9a5e684051becc5b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '113'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# イベントを使用して、フォームのヘッドレスアダプティブフォームデータを処理して送信する {#using-events}
+# イベントを使用したフォームのヘッドレスアダプティブフォームデータの処理と送信 {#using-events}
 
-これまでは、次のことを学習しています。 [カスタムヘッドレスアダプティブフォームの作成](create-and-publish-a-headless-form.md) および [カスタム React コンポーネントを使用したフォームのスタイル設定](use-google-material-ui-react-components-to-render-a-headless-form.md). この記事では、イベントを使用して、ユーザーが入力したデータを保持し、データストアに送信することに焦点を当てます。
+ここまでは、[カスタムヘッドレスアダプティブフォームの作成](create-and-publish-a-headless-form.md)と、[カスタム React コンポーネントを使用したフォームのスタイル設定](use-google-material-ui-react-components-to-render-a-headless-form.md)について説明してきました。この記事では、ユーザーが入力したデータをイベントを使用して保持したりデータストアに送信したりする方法について重点的に説明します。
 
-この記事では、Rest エンドポイントへのデータの送信について説明します。 データを任意のデータソースに送信するようにフォームを設定できます
+この記事では、REST エンドポイントへのデータの送信方法を示します。データを任意のデータソースに送信するようにフォームを設定できます
 
 ## データモデルについて
 

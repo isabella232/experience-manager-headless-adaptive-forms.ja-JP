@@ -8,13 +8,13 @@ hide: true
 hidefromtoc: true
 exl-id: d0ca7389-9a7a-421e-ab6b-7845813d860e
 source-git-commit: f489a2ba818db44ccd92df80a177f0e9f3a1bc2c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2479'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築 AEM Formsas a Cloud ServiceのアダプティブForms {#build-engaging-forms-using-core-components-and-headless}
+# コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築AEM Forms as a Cloud Service のアダプティブフォーム {#build-engaging-forms-using-core-components-and-headless}
 
 ## ラボの概要 {#lab-overview}
 
@@ -32,15 +32,15 @@ AEM Forms を使用して、AEM Sites と一貫性のある最新のコアコン
 
 ## 前提条件 {#prerequisites}
 
-この手をラボで使用するには：
+このハンズオンラボを利用するには：
 
-* をインストールします。 [Git の最新リリース](https://git-scm.com/downloads). Git を初めて使用する場合は、 [Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* [Git の最新リリース](https://git-scm.com/downloads)をインストールします。Git を初めて使用する場合は、[Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)を参照してください。
 
-* インストール [Node.js 16.13.0以降](https://nodejs.org/ja/download/). Node.js を初めて使用する場合は、 [Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs).
+* [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をインストールします。Node.js を初めて使用する場合は、[Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs)を参照してください。
 
-* [ヘッドレスアダプティブFormsの有効化](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md) AEM Formsas a Cloud Service環境用
+* AEM Forms as a Cloud Service 環境で[ヘッドレスアダプティブフォームを有効にします](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md)。
 
-* インストール [Microsoft Visual Studio Code](https://code.visualstudio.com/download) または任意のプレーンテキストエディター。 ドキュメントの例では、Microsoft Visual Studio Code を使用しています。
+* [Microsoft Visual Studio Code](https://code.visualstudio.com/download) または任意のプレーンテキストエディターをインストールします。ドキュメントの例では、Microsoft Visual Studio Code を使用しています。
 
 
 
@@ -61,7 +61,7 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
 1. Cloud Service オーサー環境にログインします。
 
-1. AEM Forms UI に移動するには、 **Forms / Formsとドキュメント**.
+1. AEM Forms UI に移動するには、**Forms／フォームとドキュメント**&#x200B;をクリックします。
 
    ![](/help/assets/screenshot2028113829.png){width="50%" align="left"}
 
@@ -108,12 +108,12 @@ AEM Forms as a Cloud Service 環境に慣れる。
       「**POST リクエストの URL**」フィールドで公開 bin を指定します（下図を参照）。
       ![](/help/assets/screenshot202023-03-0120at206.09.5320pm.png)
 
-   1. 「**作成**」をクリックします。フォームの名前とタイトルを指定します。例： **登録**. 「**作成**」をクリックします。
+   1. 「**作成**」をクリックします。フォームの名前とタイトルを指定します。例えば、**登録**&#x200B;などです。「**作成**」をクリックします。
 
-   1. アダプティブフォームエディターが開きます。ポップアップまたはダイアログを閉じて、環境設定や情報を表示します。左側のパネルでコンポーネントブラウザーをクリックし、 **ヘッダー** および **フッター** コンポーネントは、それぞれ空白フォームの上部と下部に配置されます。
+   1. アダプティブフォームエディターが開きます。ポップアップまたはダイアログを閉じて、環境設定や情報を表示します。左側のレールにあるコンポーネントブラウザーをクリックし、**ヘッダー**&#x200B;コンポーネントと&#x200B;**フッター**コンポーネントをそれぞれ空白のフォームの上部と下部に追加します。
       ![](/help/assets/screenshot2028121929.png)
 
-   1. コンポーネントブラウザーからコンポーネントをドラッグ&amp;ドロップして、次のようなフォームを作成します。
+   1. コンポーネントブラウザーからコンポーネントをドラッグ＆ドロップして、次のようなフォームを作成します。
 
       ![](/help/assets/screenshot2028115129.png){width="50%" align="left"}
 
@@ -142,15 +142,15 @@ AEM Forms as a Cloud Service 環境に慣れる。
    1. 「リクエスト bin」タブで、送信されたデータを確認します。
       ![](/help/assets/screenshot2028125829.png)
 
-1. ルールを含むフォームにインタラクティビティを追加：
+1. ルールを使用してフォームにインタラクティビティを追加します。
 
-   1. 次をクリック： **チェックボックスをオンにして 5%オフにします。** コンポーネント。 オプションツールバーで、ルールアイコンをクリックします。 「ルールエディター」オプションが開きます。
+   1. 「**チェックボックスをオンにして 5％オフを受け取る**」コンポーネントをクリックします。オプションツールバーで、ルールアイコンをクリックします。「ルールエディター」オプションが開きます。
 
-   1. ルールを作成します ( **チェックボックスをオンにして 5%オフにします。** 「 」オプションが選択されている場合、クレジットカードを適用するオプションは無効になります。
+   1. ルールを作成します。「**チェックボックスをオンにして 5％オフを受け取ります**」オプションが選択されている場合、クレジットカードを適用するオプションは無効になります。
 
 1. フォームを公開します。
 
-   1. AEM Forms管理インターフェイスを開きます。例： `https://author-p105303-e986623.adobeaemcloud.com/ui%23/aem/aem/forms.html/content/dam/formsanddocuments`をクリックし、フォームを選択します。
+   1. AEM Forms 管理インターフェイス（例：`https://author-p105303-e986623.adobeaemcloud.com/ui%23/aem/aem/forms.html/content/dam/formsanddocuments`）を開き、フォームを選択します。
 
    1. 「**公開する**」をクリックします。
 
@@ -379,7 +379,7 @@ React スタータープロジェクトを使用してローカルリポジト�
 
 1. ブラウザーで AEM Forms 管理インターフェイスを開きます。例：[https://author-p105303-e986623.adobeaemcloud.com/ui#/aem/aem/forms.html/content/dam/formsanddocuments](https://author-p105303-e986623.adobeaemcloud.com/ui%23/aem/aem/forms.html/content/dam/formsanddocuments)
 
-1. を選択します。 **接触、接触** フォームとクリック **編集。**」をクリックします。アダプティブフォームエディターでフォームが開きます。
+1. **お問い合わせ**&#x200B;フォームを選択し、「**編集**」をクリックします。アダプティブフォームエディターでフォームが開きます。
 
 
 1. 「**電話番号**」フィールドを選択し、ツールバーの&#x200B;**編集アイコン（鉛筆アイコン）**&#x200B;をクリックします。ポップアップツールバーが表示されない場合は、右上の、「**プレビュー**」ボタンの左側にある「**編集**」ボタンをクリックして、編集モードに切り替えます。

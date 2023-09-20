@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager Adaptive Formsを使用したヘッドレスフォームの作成と発行 |ステップバイステップガイド
-description: Adobe Experience Managerのアダプティブフォームを使用してヘッドレスフォームを作成して公開する方法については、この詳しい手順ガイドを参照してください。 ヘッドレスに移行してフォーム作成プロセスを効率化する利点を今すぐ確認できます。 Adobe Experience ManagerヘッドレスアダプティブFormsを使用すれば、デバイスをまたいでシームレスに動作する、動的でレスポンシブなフォームを構築できます。
+title: Adobe Experience Manager アダプティブフォームを使用したヘッドレスフォームの作成と公開 | 手順ガイド
+description: この手順ガイドでは、Adobe Experience Manager のアダプティブフォームを使用してヘッドレスフォームを作成し公開する方法について説明します。ヘッドレスに移行してフォーム作成プロセスを効率化するメリットを、今すぐ確認してください。Adobe Experience Manager ヘッドレスアダプティブフォームを使用して、様々なデバイスでシームレスに動作する、動的でレスポンシブなフォームの作成を開始しましょう。
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Headless
@@ -9,9 +9,9 @@ level: Beginner, Intermediate
 hide: false
 exl-id: cd7c7972-376c-489f-a684-f479d92c37e7
 source-git-commit: 47ac7d03c8c4fa18ac3bdcef04352fdd1cad1b16
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1017'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -19,40 +19,40 @@ ht-degree: 1%
 
 # React アプリを使用したヘッドレスフォームの作成とプレビュー {#introduction}
 
-スターターキットは、React アプリをすぐに使い始めるのに役立ちます。 angular、Vanilla JS、および任意の他の開発環境で、ヘッドレスアダプティブフォームを自由に開発および使用できます。
+スターターキットは、React アプリの使用をすぐに開始するのに役立ちます。Angular、Vanilla JS およびその他の任意の開発環境で、ヘッドレスアダプティブフォームを自由に開発および使用できます。
 
-ヘッドレスアダプティブフォームを使用すると、簡単かつ迅速に作業を開始できます。 既製の React プロジェクトのクローンを作成し、依存関係をインストールして、プロジェクトを実行します。 React アプリにヘッドレスアダプティブフォームが統合され、実行されている。 サンプルの React プロジェクトを使用して、実稼働環境にデプロイする前にヘッドレスアダプティブフォームを構築し、テストすることができます。
+ヘッドレスアダプティブフォームから始めると、作業を簡単かつ迅速に行えます。既製の React プロジェクトのクローンを作成し、依存関係をインストールして、プロジェクトを実行します。 ヘッドレスアダプティブフォームが React アプリに統合され稼働状態になっています。サンプルの React プロジェクトを使用して、ヘッドレスアダプティブフォームを作成し、実稼動環境にデプロイする前にテストすることができます。
 
-まず始めましょう：
+では、開始しましょう。
 
 >[!NOTE]
 >
 >
-> この入門ガイドでは、React アプリを使用します。 ヘッドレスアダプティブフォームを使用する場合は、任意のテクノロジーやプログラミング言語を自由に使用できます。
+> この入門ガイドでは、React アプリを使用しています。任意のテクノロジーやプログラミング言語を自由に使用して、ヘッドレスアダプティブフォームを使用できます。
 
 ## 事前準備 {#pre-requisites}
 
-React アプリを作成して実行するには、次の機能がコンピューターにインストールされている必要があります。
+React アプリを作成して実行するには、コンピューターに次のものがインストールされている必要があります。
 
-* をインストールします。 [Git の最新リリース](https://git-scm.com/downloads). Git を初めて使用する場合は、 [Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* [Git の最新リリース](https://git-scm.com/downloads)をインストールします。Git を初めて使用する場合は、[Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) を参照してください。
 
-* インストール [Node.js 16.13.0以降](https://nodejs.org/ja/download/). Node.js を初めて使用する場合は、 [Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs).
+* [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をインストールします。Node.js を初めて使用する場合は、[How to install Node.js](https://nodejs.dev/en/learn/how-to-install-nodejs) を参照してください。
 
 ## はじめに
 
-要件を満たしたら、次の手順を実行して開始します。
+要件を満たしたら、次の手順を実行して作業を開始します。
 
-1. [ヘッドレスアダプティブフォームスターターキットのセットアップ](#setup)
+1. [ヘッドレスアダプティブフォームのスターターキットをセットアップする](#setup)
 
-1. [スターターキットに含まれているヘッドレスアダプティブフォームをプレビューします。](#preview)
+1. [スターターキットに含まれているヘッドレスアダプティブフォームをプレビューする](#preview)
 
-1. [独自のヘッドレスアダプティブフォームを作成してレンダリングする](#custom)
+1. [独自のヘッドレスアダプティブフォームを作成しレンダリングする](#custom)
 
 
 
-## 1.ヘッドレスアダプティブフォームスターターキットを設定する {#install}
+## 1. ヘッドレスアダプティブフォームのスターターキットをセットアップする {#install}
 
-スターターキットは、サンプルのヘッドレスアダプティブフォームと対応するライブラリを備えた React アプリです。 このキットを使用して、ヘッドレスアダプティブフォームと対応する React コンポーネントを開発およびテストします。 ヘッドレスアダプティブフォームスターターキットを設定するには、次のコマンドを実行します。
+スターターキットは、サンプルのヘッドレスアダプティブフォームとそれに対応するライブラリを備えた React アプリです。このキットを使用して、ヘッドレスアダプティブフォームとそれに対応する React コンポーネントを開発しテストします。ヘッドレスアダプティブフォームのスターターキットをセットアップするには、次のコマンドを実行します。
 
 1. コマンドプロンプトを開き、次のコマンドを実行します。
 
@@ -60,37 +60,38 @@ React アプリを作成して実行するには、次の機能がコンピュ�
    git clone https://github.com/adobe/react-starter-kit-aem-headless-forms
    ```
 
-   このコマンドは、 **react-starter-kit-aem-headless-forms** 現在の場所に Headless アダプティブフォームの React スターターアプリを複製します。 フォームのレンダリングに必要な設定と依存関係のリストに加えて、このディレクトリには次の重要なコンテンツが含まれます。
+   このコマンドは、現在の場所に **react-starter-kit-aem-headless-forms** というディレクトリを作成し、その中にヘッドレスアダプティブフォームの React スターターアプリのクローンを作成します。このディレクトリには、フォームのレンダリングに必要な設定と依存関係のリストに加えて、次の重要なコンテンツが含まれています。
 
-   * **サンプルフォーム**：スターターキットには、サンプルのローン申し込みフォームが含まれています。 アプリに含まれているフォーム（フォーム定義）を表示するには、 `/react-starter-kit-aem-headless-forms/form-definations/form-model.json` ファイル。
-   * **React コンポーネントのサンプル**：スターターキットには、リッチテキストとスライダー用のサンプル React コンポーネントが含まれています。 このガイドでは、これらのリッチテキストコンポーネントとスライダーコンポーネントを使用して独自のカスタムコンポーネントを作成する方法について説明します。
-   * **Mappings.ts**: mappings.ts ファイルは、カスタムコンポーネントをフォームフィールドにマッピングするのに役立ちます。 例えば、数値ステッパーフィールドを評価コンポーネントとマッピングします。
-   * **環境設定**：環境設定を使用すると、スターターキットに含まれるフォームをレンダリングするか、AEM Forms Server からフォームを取得するかを選択できます。
+   * **サンプルフォーム**：スターターキットには、サンプルのローン申し込みフォームが含まれています。アプリに付属しているフォーム（フォーム定義）を表示するには、`/react-starter-kit-aem-headless-forms/form-definations/form-model.json` ファイルを開きます。
+   * **React コンポーネントのサンプル**：スターターキットには、リッチテキストとスライダー用のサンプル React コンポーネントが含まれています。このガイドは、これらのリッチテキストコンポーネントとスライダーコンポーネントを使用して独自のカスタムコンポーネントを作成するのに役立ちます。
+   * **mappings.ts**：mappings.ts ファイルは、カスタムコンポーネントをフォームフィールドにマッピングするのに役立ちます。例えば、数値ステッパーフィールドを評価コンポーネントとマッピングするといった場合です。
+   * **環境設定**：環境設定では、スターターキットに含まれているフォームをレンダリングするか、AEM Forms サーバーからフォームを取得するかを選択できます。
 
    ![](/help/assets/getting-started-starter-kit-content.png)
 
    >[!NOTE]
    >
    > 
-   > ドキュメント内の例は VSCode に基づいています。 任意のプレーンテキストコードエディターを自由に使用できます。
+   > ドキュメント内の例は VSCode に基づいています。任意のプレーンテキストコードエディターを自由に使用できます。
 
 
-1. 次に移動： **react-starter-kit-aem-headless-forms** ディレクトリに移動し、次のコマンドを実行して依存関係をインストールします。
+1. **react-starter-kit-aem-headless-forms** ディレクトリに移動し、次のコマンドを実行して依存関係をインストールします。
 
    ```shell
    npm install
    ```
 
-   このコマンドは、アプリの実行と構築に必要なすべてのパッケージとライブラリをダウンロードします。例えば、ヘッドレスアダプティブフォームライブラリ (@aemforms/af-react-renderer、@aemforms/af-react-components、@adobe/react-spectrum)、検証を実行し、フォームのインスタンスのデータを保持します。
+   このコマンドは、ヘッドレスアダプティブフォームライブラリ
+（@aemforms/af-react-renderer、@aemforms/af-react-components、@adobe/react-spectrum）など、アプリの構築と実行に必要なすべてのパッケージとライブラリをダウンロードし、検証を実行して、フォームのインスタンスのデータを保持します。
 
    ![](/help/assets/install-react-app-starter-kit.png)
 
 
-## 2.ヘッドレスアダプティブフォームのプレビュー {#preview}
+## 2. ヘッドレスアダプティブフォームをプレビューする {#preview}
 
-スターターキットを設定した後、サンプルのヘッドレスアダプティブフォームをプレビューし、独自のカスタムフォームに置き換えることができます。 また、スターターキットを設定して、AEM Forms Server からフォームを取得することもできます。 フォームをプレビューするには
+スターターキットをセットアップした後、サンプルのヘッドレスアダプティブフォームをプレビューしてから、独自のカスタムフォームに置き換えることができます。また、AEM Forms サーバーからフォームを取得するように、スターターキットを設定することもできます。フォームをプレビューするには、次の手順に従います。
 
-1. 名前を変更 `env_template` ～にファイルを送る `.env` ファイル。 また、USE_LOCAL_JSON オプションが true に設定されていることを確認します。
+1. `env_template` ファイルの名前を `.env` に変更します。また、USE_LOCAL_JSON オプションが true に設定されていることを確認します。
 
    ![](/help/assets/rename-env-file.png)
 
@@ -98,26 +99,26 @@ React アプリを作成して実行するには、次の機能がコンピュ�
     *  To source forms definantion (.JSON) from an AEM Server, set USE_LOCAL_JSON option to false, use the AEM_URL option to specify URL  of your AEM Server, and set the AEM_FORM_PATH option to path of your adaptive form.
     *  To source forms definantion (.JSON) form-model.json file included in the starter-kit, set USE_LOCAL_JSON option to false. -->
 
-1. 次のコマンドを使用して、アプリケーションを実行します。
+1. 次のコマンドを使用して、アプリを実行します。
 
    ```shell
      npm start
    ```
 
 
-   このコマンドは、ローカル開発サーバーを起動し、スターターアプリに含まれるサンプルのヘッドレスアダプティブフォームをデフォルトの Web ブラウザーで開きます。
+   このコマンドは、ローカル開発サーバーを起動し、スターターアプリに含まれているサンプルのヘッドレスアダプティブフォームをデフォルトの web ブラウザーで開きます。
 
-   ![ヘッドレスフォームのサンプル](assets/sample-headless-adaptive-form.png)
+   ![サンプルのヘッドレスフォーム](assets/sample-headless-adaptive-form.png)
 
-   これです！ これで、カスタムのヘッドレスアダプティブフォームの開発を開始するための設定が整いました。
+   これで完了です。カスタムのヘッドレスアダプティブフォームの開発を開始する準備がすべて整いました。
 
    <!--  As you know, in a headless form the form data and logic are separate from the presentation layer and can be used by any client that can make HTTP requests, such as a mobile app, a static site, or a different web application. The form is often managed and stored on a server, which serves as the backend for the form. The client sends requests to the server to retrieve the form, submit data, and receive updated form data. This allows for greater flexibility and integration with different technologies. You can store and retrive a Headless adaptive form on an AEM Server  -->
 
-## 3.独自のヘッドレスアダプティブフォームを作成してレンダリングする{#custom}
+## 3. 独自のヘッドレスアダプティブフォームを作成しレンダリングする{#custom}
 
-ヘッドレスアダプティブフォームは、フィールドやボタンなどのフォームとそのコンポーネントを、JSON（JavaScript オブジェクト表記法）形式で表しています。 JSON 形式を使用する利点は、様々なプログラミング言語で簡単に解析および使用でき、システム間でフォームデータを交換する便利な方法になることです。 アプリに含まれているサンプルのヘッドレスアダプティブフォームを表示するには、 `/react-starter-kit-aem-headless-forms/form-definations/form-model.json` ファイル。
+ヘッドレスアダプティブフォームは、フォームとそのコンポーネント（フィールドやボタンなど）を、JSON（JavaScript Object Notation）形式で表します。JSON 形式を使用する利点は、様々なプログラミング言語で簡単に解析および使用できるので、システム間でフォームデータを交換する際に便利であることです。アプリに付属しているサンプルのヘッドレスアダプティブフォームを表示するには、`/react-starter-kit-aem-headless-forms/form-definations/form-model.json` ファイルを開きます。
 
-「名前」、「電子メール」、「連絡先番号」、「メッセージ」の 4 つのフィールドを持つ連絡先フォームを作成します。 フィールドは、JSON 内でオブジェクト（項目）として定義され、各オブジェクト（項目）には、タイプ、ラベル、名前、必須などのプロパティが含まれます。 フォームには、「送信」タイプのボタンもあります。 フォームの JSON を次に示します。
+「Name」、「Email」、「Contact Number」、「Message」の 4 つのフィールドを持つ、お問い合わせフォームを作成しましょう。これらのフィールドは JSON 内でオブジェクト（項目）として定義され、各オブジェクト（項目）には type、label、name、required などのプロパティがあります。フォームには、name が「submit」のボタンもあります。フォームの JSON コードは次のとおりです。
 
 
 ```JSON
@@ -180,14 +181,14 @@ React アプリを作成して実行するには、次の機能がコンピュ�
 
 >[!NOTE]
 >
-> * 「afModelDefinition」属性は、React アプリケーションに対してのみ必要で、フォーム定義の一部ではありません。
-> * フォームの JSON を手作業で作成するか、 [AEMアダプティブフォームエディター（アダプティブフォームの WYSIWYG エディター）](create-a-headless-adaptive-form.md) フォーム JSON を作成して配信します。 実稼動環境では、AEM Formsを使用してフォーム JSON を後で配信します。
-> * このチュートリアルでは、 https://pipedream.com/を使用してフォーム送信をテストします。 組織が承認した独自のエンドポイントまたはサードパーティのエンドポイントを使用して、ヘッドレスアダプティブフォームからデータを受け取る。
+> * 「afModelDefinition」属性は、React アプリケーションにのみ必要で、フォーム定義の一部ではありません。
+> * フォームの JSON コードは、手動で作成することもできますし、[AEM アダプティブフォームエディター（アダプティブフォームの WYSIWYG エディター）](create-a-headless-adaptive-form.md)を使用して作成し提供することもできます。実稼動環境では、AEM Forms を使用してフォームの JSON コードを提供します。詳細については後ほど説明します。
+> * このチュートリアルでは、https://pipedream.com/ を使用してフォーム送信をテストします。ヘッドレスアダプティブフォームからデータを受信するには、組織が承認した独自のエンドポイントまたはサードパーティのエンドポイントを使用します。
 
 
-フォームをレンダリングするには、サンプルのヘッドレスアダプティブフォーム JSON を置き換えます。 `/react-starter-kit-aem-headless-forms/form-definations/form-model.json` 上記の JSON を使用して、ファイルを保存し、starter-kit がフォームをコンパイルして更新するのを待ちます。
+フォームをレンダリングするには、サンプルのヘッドレスアダプティブフォーム JSON コード `/react-starter-kit-aem-headless-forms/form-definations/form-model.json` を、上記の JSON コードに置き換え、ファイルを保存し、スターターキットがコンパイルしてフォームを更新するまで待ちます
 
-![サンプルのヘッドレスアダプティブフォーム JSON を置き換える `/react-starter-kit-aem-headless-forms/form-definations/form-model.json` カスタムのヘッドレスアダプティブフォーム JSON を使用する](assets/render-custom-headless-adaptive-form.png)
+![サンプルのヘッドレスアダプティブフォーム JSON コード `/react-starter-kit-aem-headless-forms/form-definations/form-model.json` をカスタムのヘッドレスアダプティブフォーム JSON コードに置き換える](assets/render-custom-headless-adaptive-form.png)
 
 <!-- Your form is ready. Let's add some validations and make "Name", "Email", and "Message" fields mandatory. -->
 
@@ -196,16 +197,16 @@ React アプリを作成して実行するには、次の機能がコンピュ�
 
 ## ボーナス
 
-フォームをホストする Web ページのタイトルをに設定します。 `Contact Us | WKND Adventures and Travel`. タイトルを変更するには、 _react-starter-kit-aem-headless-forms/public/index.html_ ファイルを編集し、タイトルを設定します。
+フォームをホストする web ページのタイトルを `Contact Us | WKND Adventures and Travel` に設定しましょう。タイトルを変更するには、_react-starter-kit-aem-headless-forms/public/index.html_ ファイルを開いて編集し、タイトルを設定します。
 
 ![](assets/contact-us-headless-adaptive-forms-updated-title.png)
 
 
 ## 次の手順
 
-デフォルトでは、スターターキットは [Adobeスペクトル](https://spectrum.adobe.com/) フォームをレンダリングするコンポーネント。 独自のコンポーネントまたはサードパーティのコンポーネントを作成して使用できます。 例えば、Googleの素材 UI やチャクラ UI を使用します。
+デフォルトでは、スターターキットは[アドビの Spectrum](https://spectrum.adobe.com/) コンポーネントを使用して、フォームをレンダリングします。独自のコンポーネントを作成して使用することも、サードパーティのコンポーネントを使用することもできます。例えば、Google マテリアル UI や Chakra UI を使用できます。
 
-さあ [Google Material UI の使用](use-google-material-ui-react-components-to-render-a-headless-form.md) 「お問い合わせ」フォームをレンダリングするには、以下を実行します。
+[Google マテリアル UI を使用](use-google-material-ui-react-components-to-render-a-headless-form.md)して、お問い合わせフォームをレンダリングしてみましょう。
 
 
 

@@ -12,19 +12,19 @@ topic-tags: develop
 hide: true
 exl-id: 46df943c-0622-4b3b-a802-85c39ac6a734
 source-git-commit: 47ac7d03c8c4fa18ac3bdcef04352fdd1cad1b16
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2189'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
-# コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築 アダプティブForms(AEM 6.5 Forms) {#build-engaging-forms-using-core-components-and-headless}
+# コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築AEM 6.5 Forms のアダプティブフォーム {#build-engaging-forms-using-core-components-and-headless}
 
 ## ラボの概要 {#lab-overview}
 
 この実践ラボでは、次のことを学習します。
 
-AEM Sitesと一貫性のある最新のコアコンポーネントを使用してAEM Formsを簡単にアダプティブFormsを作成する方法。アダプティブFormsをヘッドレスフォームとして Web、モバイル、チャットに提供することで、オムニチャネルのデータ取得エクスペリエンスを有効にします。 また、スタイル設定、カスタマイズ、フロントエンド開発に関するベストプラクティスについても学習します。
+AEM Forms を使用して、AEM Sites と一貫性のある最新のコアコンポーネントを使って簡単にアダプティブフォームを作成し、アダプティブフォームをヘッドレスフォームとして web、モバイル、チャットに配信することで、オムニチャネルのデータ取得エクスペリエンスを実現する方法。また、スタイル設定、カスタマイズ、フロントエンド開発に関するベストプラクティスについても学習します。
 
 ## 重要ポイント {#key-takeaways}
 
@@ -36,30 +36,30 @@ AEM Sitesと一貫性のある最新のコアコンポーネントを使用し�
 
 ## 事前準備 {#pre-requisites}
 
-この手をラボで使用するには：
+このハンズオンラボを利用するには：
 
-* をインストールします。 [Git の最新リリース](https://git-scm.com/downloads). Git を初めて使用する場合は、 [Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* [Git の最新リリース](https://git-scm.com/downloads)をインストールします。Git を初めて使用する場合は、[Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)を参照してください。
 
-* インストール [Node.js 16.13.0以降](https://nodejs.org/ja/download/). Node.js を初めて使用する場合は、 [Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs).
+* [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をインストールします。Node.js を初めて使用する場合は、[Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs)を参照してください。
 
-* [ヘッドレスアダプティブFormsの有効化](enable-headless-adaptive-forms-and-core-components.md) (AEM 6.5 Forms環境で使用 )
+* AEM 6.5 Forms 環境で[ヘッドレスアダプティブフォームを有効にする](enable-headless-adaptive-forms-and-core-components.md)。
 
-* インストール [Microsoft Visual Studio Code](https://code.visualstudio.com/download) または任意のプレーンテキストエディター。 ドキュメントの例では、Microsoft Visual Studio Code を使用しています。
+* [Microsoft Visual Studio Code](https://code.visualstudio.com/download) または任意のプレーンテキストエディターをインストールします。ドキュメントの例では、Microsoft Visual Studio Code を使用しています。
 
 ## レッスン 1 {#lesson-1}
 
 ### 目的 {#lesson-1-objectives}
 
-AEM 6.5 Forms環境について確認します。
+AEM 6.5 Forms 環境を理解する。
 
 ### レッスンのコンテキスト {#lesson-1-context}
 
-このレッスンでは、ユーザーインターフェイスを移動してAEM 6.5 Formsに慣れています。
+このレッスンでは、ユーザーインターフェイスをナビゲートして AEM 6.5 Forms を理解します。
 
 ### 演習 {#lesson-1-excercise}
 
-1. ブラウザーを開き、 オーサー環境の URL を入力します。例：
-   [https://localhost:4502](https://localhost:4502).
+1. ブラウザーを開き、オーサー環境の URL を入力します。例：
+   [https://localhost:4502](https://localhost:4502)。
 
 1. ログインした後、AEM Forms UI に移動します。**Forms** をクリックします。
 
@@ -81,7 +81,7 @@ AEM 6.5 Forms環境について確認します。
 
 ### レッスンのコンテキスト
 
-このレッスンでは、ビジネスユーザーとして、標準化された標準コアコンポーネントを使用して Adaptive Forms Editor を使用し、Web、モバイル、チャットなど複数のチャネル用のアダプティブフォームを作成し、データを取得します。
+このレッスンでは、ビジネスユーザーとして、すぐに利用可能な標準化されたコアコンポーネントを使用してデータを取得し、アダプティブフォームエディターを使用して、web、モバイル、チャットなどの複数のチャネル用のアダプティブフォームを作成します。
 
 ### 演習
 
@@ -93,43 +93,43 @@ AEM 6.5 Forms環境について確認します。
    1. **公開 bin を作成**をクリックし、エンドポイント URL をコピーします。
       ![](/help/assets/screenshot202023-03-0120at206.10.0020pm.png){width="50%" align="left"}
 
-   この特定のエンドポイントは、データの送信と表示の例として機能します。 実際の実稼動環境では、独自のエンドポイントまたはデータソースを使用して、取り込んだデータを保存します。
+   この特定のエンドポイントは、データを送信および表示するための例として機能します。実際の運用では、独自のエンドポイントまたはデータソースを使用して、キャプチャされたデータを保存します。
 
 1. アダプティブフォームの作成：
 
-   1. レッスン 1 で使用するブラウザータブで、 AEM Forms Web インターフェイスに移動し、に移動します。 **Forms** > **Formsとドキュメント**.
+   1. レッスン 1 で使用したブラウザータブで、AEM Forms web インターフェイスに移動し、**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
 
    1. 「**作成**」をタップして、「アダプティブフォーム」を選択します。
       ![](/help/assets/creating-adaptive-form-6-5.png){width="50%" align="left"}
 
-   1. を選択します。 **コアコンポーネントで空白** 次に示すように、テンプレートの選択画面からテンプレートを選択し、「 」をクリックします。 **次へ**.
+   1. 選択画面から、**コアコンポーネントを含んだ空白**&#x200B;テンプレートを選択し（下図を参照）「**次へ**」をクリックします。
       ![](/help/assets/creating-adaptive-form-6-5-select-blank-template.png){width="50%" align="left"}
 
-   1. 指定 `Contact us` として **タイトル** フォームの。 次の点を確認します。 **名前** の形式が `contact-us`.
+   1. `Contact us` を、フォームの&#x200B;**タイトル**&#x200B;として指定します。フォームの&#x200B;**名前**&#x200B;が `contact-us` であることを確認します。
       ![](/help/assets/creating-adaptive-form-65-specify-title.png){width="50%" align="left"}
 
    1. 「**作成**」をクリックします。ダイアログボックスが表示されます。
 
-   1. ダイアログボックスで、 **編集**. アダプティブフォームエディターでフォームが開きます。 ポップアップまたはダイアログを閉じて、環境設定や情報を表示します。
+   1. ダイアログボックスで「**編集**」をクリックします。アダプティブフォームエディターでフォームが開きます。ポップアップまたはダイアログを閉じて、環境設定や情報を表示します。
 
-   1. コンポーネントブラウザーを開き、パネルコンポーネントを画面の中央にドラッグ&amp;ドロップします。
+   1. コンポーネントブラウザーを開き、パネルコンポーネントを画面の中央にドラッグ＆ドロップします。
 
       ![](/help/assets/lab65-add-panel.png){width="50%" align="left"}
 
-   1. コンポーネントブラウザーからコンポーネントをドラッグ&amp;ドロップして、次のようなフォームを作成します。
+   1. コンポーネントブラウザーからコンポーネントをドラッグ＆ドロップして、次のようなフォームを作成します。
 
       ![](/help/assets/contact-us-headless-adaptive-form.png){width="50%" align="left"}
 
 
-   1. コンテンツブラウザーを開き、「Guide Container」プロパティアイコンをクリックして、 **送信** タブをクリックします。 を選択します。 **REST エンドポイントに送信** 送信アクションで、 **POST要求を有効にする** オプションを選択し、レッスン 2 で作成した REST エンドポイントを **POST要求の URL** テキストボックスをクリックし、 **完了** アイコン。
+   1. コンテンツブラウザーを開いて、コンテナのガイドプロパティアイコンをクリックし、「**送信**」タブを開きます。「送信アクション」で「**REST エンドポイントに送信**」を選択し、「**POST リクエストを有効にする**」オプションを選択して、「**POST リクエストの URL**」テキストボックスに、レッスン 2 で作成した REST エンドポイントを指定し、「**完了**」アイコンをクリックします。
 
       ![](/help/assets/configure-submit-action.png){width="50%" align="left"}
 
-1. アダプティブフォームを発行する：
+1. アダプティブフォームを公開します。
 
-   1. AEM UI を開き、に移動します。 **Forms** > **Forms &amp; Documents**. 前の手順で作成したフォームを選択し、 **公開**.
+   1. AEM UI を開き、**フォーム**／**フォームとドキュメント**&#x200B;に移動します。前の手順で作成したフォームを選択し、「**公開**」をクリックします。
 
-   1. アセットを公開ダイアログで、 **公開**. 成功メッセージが表示されます。
+   1. アセットを公開ダイアログで、「**公開**」をクリックします。成功メッセージが表示されます。
 
 ## レッスン 3
 
@@ -139,7 +139,7 @@ AEM 6.5 Forms環境について確認します。
 
 ### レッスンのコンテキスト
 
-このレッスンでは、フロントエンド開発者が、以前に作成したアダプティブフォームのスタイル設定を簡単に更新する方法を学習します。
+このレッスンでは、フロントエンド開発者が、以前に作成したアダプティブフォームのスタイルを簡単に更新する方法を説明します。
 
 ### 演習
 
@@ -149,13 +149,13 @@ AEM 6.5 Forms環境について確認します。
 
    ![](/help/assets/screenshot2028115829.png){width="50%" align="left"}
 
-1. コマンドプロンプトで、次のコマンドを使用してに移動します。 `c:\git` フォルダー。
+1. コマンドプロンプトで、次のコマンドを使用して `c:\git` フォルダーに移動します。
 
    ```Shell
    cd git
    ```
 
-   フォルダーが存在しない場合は、 `md git` 」コマンドを使用して作成します。
+   フォルダーが存在しない場合は、`md git` コマンドを使用してフォルダーを作成します。
 
 1. 次のコマンドを使用して、テーマのフロントエンドコードを複製します。
 
@@ -176,7 +176,7 @@ AEM 6.5 Forms環境について確認します。
 
    ![](/help/assets/screenshot2028116229.png){width="50%" align="left"}
 
-1. 名前を変更 `env_template` ファイルを.env に変換します。  ファイル名を変更するには、**env_template** ファイルを右クリックして、「**名前を変更**」オプションを選択します。
+1. `env_template` ファイルの名前を .env に変更します。ファイル名を変更するには、**env_template** ファイルを右クリックして、「**名前を変更**」オプションを選択します。
 
    ![](/help/assets/screenshot2028116429.png){width="30%" align="left"}
 
@@ -186,9 +186,9 @@ AEM 6.5 Forms環境について確認します。
 
 1. .env ファイルの変数に次の値を設定して、ファイルを保存します。
 
-   * **AEM_URL**：の URL を指定します。 **公開** インスタンス。 例：`https://localhost:4502/`
+   * **AEM_URL**：**パブリッシュ**&#x200B;インスタンスの URL を指定します。例：`https://localhost:4502/`
 
-   * **AEM_ADAPTIVE_FORM**：フォームの名前を指定します。 例：`contact-us`
+   * **AEM_ADAPTIVE_FORM**：フォームの名前を指定します。例：`contact-us`
 
    </br>
 
@@ -251,7 +251,7 @@ AEM 6.5 Forms環境について確認します。
 
 ### レッスンのコンテキスト
 
-このレッスンでは、フロントエンド開発者として、React スペクトルデザインフレームワークを使用して、前にヘッドレスフォームとして作成したアダプティブフォームをレンダリングする方法を学びます。
+このレッスンでは、フロントエンド開発者が、React スペクトルデザインフレームワークを使用して、以前にヘッドレスフォームとして作成したアダプティブフォームをレンダリングする方法を説明します。
 
 ### 演習
 
@@ -261,7 +261,7 @@ React スタータープロジェクトを使用してローカルリポジト�
 
    ![](/help/assets/screenshot2028115829.png){width="30%" align="left"}
 
-1. コマンドプロンプトで、次のコマンドを使用してに移動します。 `c:\git` フォルダー。
+1. コマンドプロンプトで、次のコマンドを使用して `c:\git`フォルダーに移動します。
 
    ```Shell
    cd git
@@ -290,7 +290,7 @@ React スタータープロジェクトを使用してローカルリポジト�
 
    ![](/help/assets/screenshot2028117429.png){width="50%" align="left"}
 
-パブリッシュ環境でホストされるフォームをレンダリングするには：
+パブリッシュ環境でホストされるフォームをレンダリングするには、次の手順に従います。
 
 1. env_template ファイルを.env ファイルに名前変更します。名前を変更するには、**env_template** ファイルを右クリックし、「**名前を変更**」オプションを選択します。
 
@@ -300,9 +300,9 @@ React スタータープロジェクトを使用してローカルリポジト�
 
 1. .env ファイル内の変数に次の値を設定します。変数を更新したら、ファイルを保存します。
 
-   * **AEM_URL**： パブリッシュ環境の URL を指定します。例：`https://localhost:4503/`
+   * **AEM_URL**：パブリッシュ環境の URL を指定します。例：`https://localhost:4503/`
 
-   * **AEM_FORM_PATH**：前のレッスンで作成したアダプティブフォームのパスを指定します。 例：`/content/forms/af/contact-us/`
+   * **AEM_FORM_PATH**：前のレッスンで作成したアダプティブフォームのパスを指定します。例：`/content/forms/af/contact-us/`
 
    </br>
 
@@ -336,30 +336,30 @@ React スタータープロジェクトを使用してローカルリポジト�
 
 サーバー上のフォームをビジネスユーザーとして変更し、ヘッドレスフォームに自動的に反映された変更を表示します。
 
-1. ブラウザーで AEM Forms 管理インターフェイスを開きます。例： [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+1. ブラウザーで AEM Forms 管理インターフェイスを開きます。例：[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)。
 
-1. を選択します。 **お問い合わせ** フォームとクリック **編集。** フォームがアダプティブFormsエディターで開きます。
+1. **お問い合わせ**&#x200B;フォームを選択し、「**編集**」をクリックします。アダプティブフォームエディターでフォームが開きます。
 
 
-1. を選択します。 **連絡先番号** フィールドに入力し、 **編集アイコン（鉛筆アイコン）** 」と入力します。 ポップアップツールバーが表示されない場合は、右上の、「**プレビュー**」ボタンの左側にある「**編集**」ボタンをクリックして、編集モードに切り替えます。
+1. 「**連絡先番号**」フィールドを選択し、ツールバーの&#x200B;**編集アイコン（鉛筆アイコン）**&#x200B;をクリックします。ポップアップツールバーが表示されない場合は、右上の、「**プレビュー**」ボタンの左側にある「**編集**」ボタンをクリックして、編集モードに切り替えます。
 
    ![](/help/assets/change-field-title.png){width="50%" align="left"}
 
-1. ラベルをに変更します。 **モバイル番号**. フォーム内の空のスペースをクリックすると、フォームに加えた変更が保存されます。
+1. ラベルを「**携帯電話番号**」に変更しますフォーム内の空のスペースをクリックすると、フォームに加えた変更が保存されます。
 
 更新したフォームを公開して、変更をパブリッシュ環境に反映します。
 
-1. 「 AEM Forms管理インターフェイス」タブで、「連絡先」フォームを選択し、 **非公開**. 「**非公開**」ボタンが表示されない場合、手順 3 に進んで変更を直接公開します。
+1. 「AEM Forms 管理インターフェイス」タブで、お問い合わせフォームを選択し、「**非公開**」をクリックします。「**非公開**」ボタンが表示されない場合、手順 3 に進んで変更を直接公開します。
 
 
 1. 「**非公開**」をクリックします。次のダイアログで「**閉じる**」をクリックします。
 
-1. ブラウザーが更新されたら、「連絡先」フォームを選択し、「 **公開**.
+1. ブラウザーが更新されたら、お問い合わせフォームを選択し、「**公開**」をクリックします。
 
 
 1. 「**公開する**」をクリックします。次のダイアログで「**閉じる**」をクリックします。
 
-1. ヘッドレスフォームが表示された状態で、ブラウザータブを更新します。「連絡先番号」ラベルが「モバイル番号」に変更されていることに注意してください。
+1. ヘッドレスフォームが表示された状態で、ブラウザータブを更新します。「連絡先番号」のラベルが「携帯電話番号」に変更されていることに注意してください。
 
    ![](/help/assets/headless-adaptive-form.png)
 
@@ -377,7 +377,7 @@ Google Material UI を使用してフォームをヘッドレスフォームと�
 
 ### レッスンのコンテキスト
 
-このレッスンでは、フロントエンド開発者がGoogle Material UI を使用して、前にヘッドレスフォームとして作成したアダプティブフォームをレンダリングする方法を学びます。
+このレッスンでは、フロントエンド開発者が Google Material UI を使用して、前の手順でヘッドレスフォームとして作成したアダプティブフォームをレンダリングする方法について説明します。
 
 ### 演習
 
@@ -387,7 +387,7 @@ Material UI スタータープロジェクトを使用してローカルリポ�
 
    ![](/help/assets/screenshot2028115829.png){width="30%" align="left"}
 
-1. コマンドプロンプトで、次のコマンドを使用してに移動します。 `c:\git` フォルダー。
+1. コマンドプロンプトで、次のコマンドを使用して `c:\git` フォルダーに移動します。
 
    ```Shell
    cd git
@@ -419,7 +419,7 @@ Material UI スタータープロジェクトを使用してローカルリポ�
 
    ![](/help/assets/screenshot2028126829.png)
 
-パブリッシュ環境でホストされるフォームをレンダリングするには：
+パブリッシュ環境でホストされるフォームをレンダリングするには、次の手順に従います。
 
 1. **env_template** ファイルを **.env** ファイルに名前変更します。名前を変更するには、**env_template** ファイルを右クリックし、「**名前を変更**」を選択します。
 
@@ -427,9 +427,9 @@ Material UI スタータープロジェクトを使用してローカルリポ�
 
 1. .env ファイル内の変数に次の値を設定します。変数を更新したら、ファイルを保存します。**Ctrl + S** キーを使用してファイルを保存します。
 
-   * **AEM_URL**： パブリッシュ環境の URL を指定します。例： [https://localhost:4503](https://localhost:4503)
+   * **AEM_URL**：パブリッシュ環境の URL を指定します。例：[https://localhost:4503](https://localhost:4503)
 
-   * **AEM_FORM_PATH**：前のレッスンで作成したアダプティブフォームのパスを指定します。 例： /content/forms/af/contact-us/
+   * **AEM_FORM_PATH**：前のレッスンで作成したアダプティブフォームのパスを指定します。例：/content/forms/af/contact-us/
 
 
 1. コマンドウィンドウを開き、**react-starter-kit-aem-headless-forms** ディレクトリにいることを確認し、次のコマンドを実行します。
@@ -450,7 +450,6 @@ Material UI スタータープロジェクトを使用してローカルリポ�
 
    このコマンドは、ローカル開発サーバーを起動し、Google Material UI フロントエンドライブラリを使用して、AEM から取得したフォーム定義をヘッドレスにレンダリングします。
 
-
    >[!NOTE]
    >
    >`npm start` コマンドを実行した後、ブラウザーで 3～4 分以上空白の画面が表示される場合は、ブラウザーの URL の `localhost` を 127.0.0.1 に変更して **Enter** キーを押します。
@@ -465,7 +464,7 @@ Material UI コンポーネントのバリエーションを使用して、ヘ�
 
 ### レッスンのコンテキスト
 
-このレッスンでは、フロントエンド開発者が、ビジネスユーザーによって以前に作成されたアダプティブフォームのマテリアル UI を使用して、様々なコンポーネントの代替表現を作成する方法を学びます。
+このレッスンでは、ビジネスユーザーが以前に作成したアダプティブフォームに対して、フロントエンド開発者が Material UI を使用して、様々なコンポーネントの代替表現を作成する方法について説明します。
 
 ### 演習
 
@@ -473,7 +472,7 @@ Material UI コンポーネントのバリエーションを使用して、ヘ�
 
 1. Visual Code で、`src/components/textinput/index.tsx` にある `index.tsx` ファイルを開いて、テキスト入力コンポーネントに移動します。
 
-1. コード 104 行目の先頭に `//` を追加します。行がコメントに変換されます。
+1. コード 104 行目の先頭に `//` を追加します。その行がコメントに変換されます。
 
    ```Shell
    //const Cmp = \'outlined\' === appliedCssClassNames ? OutlinedInput: Input;
@@ -508,9 +507,9 @@ Material UI コンポーネントのバリエーションを使用して、ヘ�
 
 ## よくある質問（FAQ）
 
-+++ コアコンポーネントは一般的に使用できますか？
++++ コアコンポーネントは一般公開されていますか？
 
-はい、アダプティブFormsコアコンポーネントは、AEM 6.5 FormsおよびFormsでCloud Serviceとして使用できます。 アダプティブFormsコアコンポーネントを使用するには、AEM Forms 6.5 Service Pack 16 以降が必要です。
+はい、アダプティブフォームのコアコンポーネントは、AEM 6.5 Forms および AEM Forms as a Cloud Service で使用できます。アダプティブフォームのコアコンポーネントを使用するには、AEM Forms 6.5 サービスパック 16 以降が必要です。
 
 +++
 
@@ -525,13 +524,13 @@ Material UI コンポーネントのバリエーションを使用して、ヘ�
 
 ## 次の手順
 
-これで、アダプティブFormsを構築し、ヘッドレスフォームを使用して複数のチャネルに配信する方法を学びました。新しいスキルを活用する必要があります。 優れたデータキャプチャエクスペリエンスを作成し、大規模なエンドユーザーに提供することで、楽しみながら先に進むことができます。
+アダプティブフォームの構築方法と、ヘッドレスフォームを使用して複数のチャネルにアダプティブフォームを配信する方法の説明は以上です。新しいスキルを活用してみましょう。優れたデータキャプチャエクスペリエンスを作成し、大規模なエンドユーザーに提供することで、楽しみながら先に進むことができます。
 
 ## リソース
 
 * [アダプティブフォームのコアコンポーネントの概要](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)
 
-* [コアコンポーネントを使用してアダプティブフォームを作成する](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html?lang=ja)
+* [コアコンポーネントを使用してアダプティブフォームを作成](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html?lang=ja)
 
 * [コアコンポーネントベースの AF のスタイル設定を更新](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html?lang=ja)
 

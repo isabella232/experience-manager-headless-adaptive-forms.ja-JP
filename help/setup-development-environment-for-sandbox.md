@@ -1,145 +1,146 @@
 ---
-title: Formsas a Cloud Serviceサンドボックスの開発環境の設定
-description: Formsas a Cloud Serviceサンドボックスの開発環境の設定
+title: Forms as a Cloud Service サンドボックスの開発環境のセットアップ
+description: Forms as a Cloud Service サンドボックスの開発環境のセットアップ
 hide: true
 exl-id: befac9ad-d2c4-4705-96fc-f0ea0ef823b8
 source-git-commit: 41286ff4303e0f4d404deb113fd59d1499768da5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1248'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Cloud Service上のヘッドレスアダプティブフォームの開発環境の設定
+# Cloud Service 上にヘッドレスアダプティブフォームの開発環境をセットアップする方法
 
-<span class="preview"> これは、 **作業中** 記事。</span>
+<span class="preview">これは&#x200B;**作成中**&#x200B;の記事です。</span>
 
 
-Cloud Service上でヘッドレスアダプティブフォームの作成とテストを行う準備はできていますか？ FormsをCloud Serviceプログラムに対して有効にし、開始します。
+Cloud Service 上でヘッドレスアダプティブフォームをビルドしテストする準備ができたら、Cloud Service プログラムのフォームを有効にし、作業を開始してください。
 
-## 始める前に
+## 事前準備
 
-* インストール [Git の最新バージョン](https://git-scm.com/downloads) ローカルマシン上にある。 Git を初めて使用する場合は、 [Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Git リポジトリを使用して、開発環境で開発されたフォームおよびカスタムコードを、ローカル開発開発環境にプッシュします。Cloud Service
+* [Git の最新バージョン](https://git-scm.com/downloads)をローカルマシンにインストールします。Git を初めて使用する場合は、[Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) を参照してください。Git リポジトリを使用して、ローカル開発環境で開発したフォームとカスタムコードを Cloud Service 開発環境にプッシュします。
 
-* インストール [Node.js 16.13.0以降](https://nodejs.org/ja/download/) ローカルマシン上にある。 Node.js を初めて使用する場合は、 [Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs).
+* [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をローカルマシンにインストールします。Node.js を初めて使用する場合は、[How to install Node.js](https://nodejs.dev/en/learn/how-to-install-nodejs) を参照してください。
 
-* AEMas a Cloud Serviceプログラムの作成： [プログラムを作成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program) 記事を参照して、組織のプログラムを作成してください。
+* AEM as a Cloud Service プログラムの作成：[プログラムの作成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program)記事の手順 1～7 に従って、組織に対応するプログラムを作成します。
 
-* 有効にする [チャネルプログラムのプレリリースCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?cloud-environments).
+* [Cloud Service プログラムのプレリリースチャネル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=ja?cloud-environments)を有効にします。
 
-## ワークフローを設定
+## ワークフローのセットアップ
 
-Formsas a Cloud Serviceサンドボックスでヘッドレスアダプティブフォームを有効にするには、を有効にします。 `Forms - Digital enrolment` AEM Cloud Serviceプログラムのソリューション、ローカルマシン上に Archetype 37 以降ベースのプロジェクトを作成し、Forms as a Cloud Service環境にプッシュします。 完全なプロセスは次のとおりです。
+Forms as a Cloud Service サンドボックスでヘッドレスアダプティブフォームを有効にするには、AEM Cloud Service プログラムの `Forms - Digital enrolment` ソリューションを有効にし、ローカルマシン上に Archetype 37 以降をベースにしたプロジェクトを作成して、Forms as a Cloud Service 環境にプッシュします。詳しい手順は次のとおりです。
 
-![Formsas a Cloud Serviceサンドボックスの開発環境を設定するためのワークフロー](assets/FORMS-HLAF-SANDBOX-PRODUCTION-ENR.png)
+![Forms as a Cloud Service サンドボックスの開発環境をセットアップするためのワークフロー](assets/FORMS-HLAF-SANDBOX-PRODUCTION-ENR.png)
 
-### 1.プログラムに対してFormsを有効にする
+### 1. プログラムに対して Forms を有効にする
 
 <table style="table-layout:auto">
 <tr>
   <td>
-  1.にログインする <a href="https://experience.adobe.com/" > https://experience.adobe.com/ </a>  をクリックし、 <b> Experience Manager </b> オプション。
+  1. <a href="https://experience.adobe.com/" >https://experience.adobe.com/</a> にログインし、「<b>Experience Manager</b>」オプションを選択します。
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/cloud-manager-experience-manager.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/cloud-manager-experience-manager.png">
     </a>
     <br>
   </td>
 </tr>
 <tr>
   <td>
-  2. <b> Cloud Manager </b> オプション、クリック <b> を起動します。 </b> 組織のプログラムのリストが表示されます。
+  2.「<b>Cloud Manager</b>」オプションの「<b>起動</b>」をクリックします。組織のプログラムのリストが表示されます。
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/cloud-manager-experience-manager-launch.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/cloud-manager-experience-manager-launch.png">
     </a>
     <br>
   </td>
 </tr>
 <tr>
   <td>
-    3.プログラムの場合、...アイコンをタップし、 <b> プログラムを編集 </b> オプション。 ダイアログボックスが表示されます。 
+    3. プログラムの「...」アイコンをタップし、「<b>プログラムを編集</b>」オプションを選択します。ダイアログボックスが表示されます。 
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/edit-program.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/edit-program.png">
     </a>
     <br>
   </td>
 </tr>
 <tr>
   <td>
-    4. [ プログラムの編集 ] ダイアログボックスで、 <b> 「ソリューションとアドオン」タブ </b>を選択し、 <b> Forms — デジタル登録 </b> オプションを選択し、をタップします。 <b> 更新 </b>. 
+    4. プログラムを編集ダイアログボックスで「<b>ソリューションとアドオン</b>」タブに移動し、「<b>Forms - デジタル登録</b>」オプションを選択して、「<b>更新</b>」をタップします。 
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/program-solution-addons.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/program-solution-addons.png">
     </a>
     <br>
   </td>
 </tr>
 </table>
 
-### 2.プログラムの Git リポジトリをローカルマシンに複製する
+### 2. プログラムの Git リポジトリのクローンをローカルマシン上に作成する
 
-すべてのAEMas a Cloud Serviceプログラムには Git リポジトリがあります。 カスタムコードやアセットをローカルマシンからCloud Service環境にアップロードできます。 セットアップ時には、Git リポジトリを使用して、ヘッドレスアダプティブフォーム関連のコード、テンプレート、その他の情報をローカルマシンからCloud Serviceプログラムに取り込みます。 ローカルマシン上のCloud Servicegit リポジトリーのクローンを作成することは、カスタムコードとコンテンツをローカルマシンからCloud Serviceに移行する最初の手順です。
+どの AEM as a Cloud Service プログラムにも Git リポジトリがあります。Git リポジトリを使用すると、カスタムコードとアセットをローカルマシンから Cloud Service 環境にアップロードできます。セットアップ時に Git リポジトリを使用して、ヘッドレスアダプティブフォーム関連のコードやテンプレートなどの情報をローカルマシンから Cloud Service プログラムに取り込みます。カスタムコードとコンテンツをローカルマシンから Cloud Service に取り込むための最初の手順は、ローカルマシン上で Cloud Service の Git リポジトリのクローンを作成することです。
 
 >[!INFO]
 >
-> Git リポジトリは、複製せずに常にコミットできます。 しかし、それは独自の奇妙なものを持っています。 この文書ではクローニングの手法を使っています
+> Git リポジトリには常に、クローンを作成せずにコミットできます。しかし、想定外のことが起こる危険性もあります。そのため、このドキュメントではクローンを作成するアプローチを採用しています。
 
 
-リポジトリのクローンを作成するには、次を手順を実行します。
+リポジトリのクローンを作成するには：
 
 <table style="table-layout:fixed">
 <tr>
   <td>
-  1.プログラムのパイプラインボックスで、をタップします。 <b> リポジトリ情報にアクセスします。 </b> リポジトリ情報を含むダイアログが表示されます 
+  1. プログラムのパイプラインボックスで、「<b>リポジトリ情報にアクセス</b>」をタップします。リポジトリ情報を含んだダイアログが表示されます 
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/git-repo.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/git-repo.png">
     </a>
     <br>
   </td>
 </tr>
 <tr>
   <td>
-  2.をタップします。 <b> パスワードを生成 </b> をクリックし、 <b> リポジトリ URL。 </b> 
+  2.「<b>パスワードを生成</b>」をタップし、「<b>リポジトリ URL</b>」をコピーします。 
   </td>
   <td>
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/repository-info.png">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/repository-info.png">
     <br>
   </td>
 </tr>
 <tr>
   <td>
-    3.ローカルマシン上で、コマンドプロンプトを開き、フォルダーを作成して、次のコマンドを実行し、リポジトリの資格情報を指定します。次のように求められます。
-    </br>
-    <code> git clone [Repository URL] </code> </br></br>
-    例： </br> 
+    3. ローカルマシンでコマンドプロンプトを開き、フォルダーを作成して次のコマンドを実行し、要求されたリポジトリ資格情報を入力します。
+ </br>
+ <code> git clone [Repository URL] </code> </br></br>
+ 例： </br> 
     <code> git clone https://git.cloudmanager.adobe.com/stage-aemformsdev/khushwantsingh-p45413-uk89613/ </code>
 
-</br> 尋ねられたら、 <b> ユーザー名</b> および <b>パスワード</b> から <b>リポジトリ情報</b> 画面。
+</br>要求されたら、<b>リポジトリ情報</b>画面から「<b>ユーザー名</b>」と「<b>パスワード</b>」を取得します。
 </td>
   <td>
-     <img alt="AEMas a Cloud Serviceプログラム" src="assets/clone-success.png">
+     <img alt="AEM as a Cloud Service プログラム" src="assets/clone-success.png">
   </td>
 </tr>
 </table>
 
 
-### 3. AEMアーキタイプベースのプロジェクトを作成する
+### 3. AEM アーキタイプベースのプロジェクトを作成する
 
-アーキタイププロジェクトは、Maven ベースのテンプレートです。 ヘッドレスアダプティブフォームの使用を開始するためのベストプラクティスに基づいて、最小限のプロジェクトを作成します。 また、Formsas a Cloud Service用のヘッドレスアダプティブフォームのコア機能も含まれています。 アーキタイプ 37 以降ベースのプロジェクトの作成とデプロイが必須です。
-®®(R) オペレーティングシステムに応じて、maven コマンドを実行してExperience Manager Formsas a Cloud Serviceプロジェクトを作成します。 アーキタイプバージョン 37 以降を使用します。 詳しくは、 [アーキタイプのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) をクリックして、最新バージョンのアーキタイプを検索します。
+アーキタイププロジェクトは、Maven ベースのテンプレートです。ヘッドレスアダプティブフォームの使用を開始するためのベストプラクティスに基づいて、最小限のプロジェクトを作成します。また、Forms as a Cloud Service のコアとなるヘッドレスアダプティブフォーム機能も含んでいます。アーキタイプ 37 以降をベースとするプロジェクトを作成しデプロイすることが必須です。
+®®®
+オペレーティングシステムに応じて、maven コマンドを実行して、Experience Manager Forms as a Cloud Service プロジェクトを作成します。アーキタイプバージョン 37 以降を使用します。アーキタイプの最新バージョンについては、[アーキタイプのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を参照してください。
 
 +++ Microsoft® Windows
 
 1. 管理者権限でコマンドプロンプトを開きます（コマンドプロンプトまたは bash シェルを管理者として実行します）。
-1. 次のコマンドを実行します。
+1. 以下のコマンドを実行します。
 
    ```shell
      mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate ^
@@ -153,21 +154,22 @@ Formsas a Cloud Serviceサンドボックスでヘッドレスアダプティブ
      -D includeFormsheadless="y" 
    ```
 
-™™™ *設定 `appTitle` ：タイトルとコンポーネントグループを定義します。
-*設定 `appId` Maven アーティファクト ID、コンポーネント、設定、コンテンツのフォルダー名、クライアントライブラリ名を定義します。
-*設定 `groupId` :Maven groupId と Java™ソースパッケージを定義します。
-* `includeFormsenrollment=y` アダプティブFormsの作成に必要なForms固有の設定、テーマ、テンプレート、コアコンポーネント、依存関係を含めるオプションが追加されました。
-* `includeFormsheadless=y` ヘッドレスアダプティブフォーム機能を組み込むために必要なFormsコアコンポーネントと依存関係を含めるオプション。 このオプションを有効にすると、次の情報が含まれます。\
-* **コアコンポーネントを含む空白** 次のテンプレート [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja).
-*フロントエンド React モジュール `ui.frontend.react.forms.af`. React アプリでヘッドレスアダプティブフォームをレンダリングするのに役立ちます。
+™™™
+* `appTitle` を設定して、タイトルやコンポーネントグループを定義します。
+* `appId` を設定して、Maven アーティファクト ID、コンポーネントフォルダー名、設定フォルダー名、コンテンツフォルダー名およびクライアントライブラリ名を定義します。
+* `groupId` を設定して、Maven グループ ID と Java™ ソースパッケージを定義します。
+* `includeFormsenrollment=y` オプションを使用して、アダプティブフォームの作成に必要なフォーム固有の設定、テーマ、テンプレート、コアコンポーネントおよび依存関係を組み込みます。
+* `includeFormsheadless=y` オプションを使用して、ヘッドレスアダプティブフォーム機能の追加に必要な Forms コアコンポーネントおよび依存関係を組み込みます。このオプションを有効にすると、以下が組み込まれます。\
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を含んだ **Blank With Core Components** テンプレート。
+* フロントエンド React モジュール `ui.frontend.react.forms.af`。これは、React アプリでヘッドレスアダプティブフォームをレンダリングするのに役立ちます。
 
-+++®®
++++®®®
 
 
-+++ Apple macOSまたは Linux®
++++ Apple macOS または Linux®
 
-1. ターミナルをルートユーザーとして開きます。 管理者権限を持つコマンドを実行できます。 また、 `sudo root` コマンドを実行します。
-1. 次のコマンドを実行します。
+1. ターミナルをルートユーザーとして開きます。管理者権限でコマンドを実行できるようになります。ターミナルウィンドウを開いた後に `sudo root` コマンドを使用して、管理者権限でコマンドを実行することもできます。
+1. 以下のコマンドを実行します。
 
    ```shell
      mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
@@ -181,25 +183,26 @@ Formsas a Cloud Serviceサンドボックスでヘッドレスアダプティブ
      -D includeFormsheadless="y"  
    ```
 
-™™™ *設定 `appTitle` ：タイトルとコンポーネントグループを定義します。
-*設定 `appId` Maven アーティファクト ID、コンポーネント、設定、コンテンツのフォルダー名、クライアントライブラリ名を定義します。
-*設定 `groupId` :Maven groupId と Java™ソースパッケージを定義します。
-* `includeFormsenrollment=y` アダプティブFormsの作成に必要なForms固有の設定、テーマ、テンプレート、コアコンポーネント、依存関係を含めるオプションが追加されました。
-* `includeFormsheadless=y` ヘッドレスアダプティブフォーム機能を組み込むために必要なFormsコアコンポーネントと依存関係を含めるオプション。 このオプションを有効にすると、次の情報が含まれます。\
-* **コアコンポーネントを含む空白** 次のテンプレート [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja).
-*フロントエンドはモジュールを反応させ、 `ui.frontend.react.forms.af`. React アプリでヘッドレスアダプティブフォームをレンダリングするのに役立ちます。
+™™™
+* `appTitle`を設定して、タイトルやコンポーネントグループを定義します。
+* `appId` を設定して、Maven アーティファクト ID、コンポーネントフォルダー名、設定フォルダー名、コンテンツフォルダー名およびクライアントライブラリ名を定義します。
+* `groupId` を設定して、Maven グループ ID と Java™ ソースパッケージを定義します。
+* `includeFormsenrollment=y` オプションを使用して、アダプティブフォームの作成に必要なフォーム固有の設定、テーマ、テンプレート、コアコンポーネントおよび依存関係を組み込みます。
+* `includeFormsheadless=y` オプションを使用して、ヘッドレスアダプティブフォーム機能の追加に必要な Forms コアコンポーネントおよび依存関係を組み込みます。このオプションを有効にすると、以下が組み込まれます。\
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を含んだ **Blank With Core Components** テンプレート。
+* フロントエンド React モジュール `ui.frontend.react.forms.af`。これは、React アプリでヘッドレスアダプティブフォームをレンダリングするのに役立ちます。
 
 +++
 
-コマンドが正常に完了すると、 `appID` が作成されました。 例えば、 `appID` 値と共に `myheadlessform`，フォルダー名： `myheadlessform` が作成されました。 アーキタイプベースのプロジェクトが含まれます。
+コマンドが正常に完了すると、`appID` で指定した名前のプロジェクトフォルダーが作成されます。例えば、値 `myheadlessform` の `appID` を使用する場合は、`myheadlessform` という名前のフォルダーが作成されます。ここには、アーキタイプベースのプロジェクトが含まれます。
 
-### 4. AEMアーキタイプベースのプロジェクトをCloud Service環境にプッシュします
+### 4. AEM アーキタイプベースのプロジェクトを Cloud Service 環境にプッシュする
 
-1. Git リポジトリのコンテンツを、アーキタイプベースのプロジェクトのコンテンツで置き換えます。
+1. Git リポジトリの内容を、アーキタイプベースのプロジェクトの内容で置き換えます。
 
    >[!VIDEO](https://video.tv.adobe.com/v/3409809/)
 
-1. コマンドプロンプトを開き、Git リポジトリフォルダーに移動し、次のコマンドをリストの順序で実行して、置き換えたコンテンツをCloud Service環境にアップロードします。 次のコマンドを使用する代わりに、ビジュアルエディターを使用して、コンテンツをCloud Serviceリポジトリにプッシュすることもできます。
+1. コマンドプロンプトを開き、Git リポジトリフォルダーに移動し、次のコマンドをリストした順に実行して、置き換えた内容を Cloud Service 環境にアップロードします。下記のコマンドを使用する代わりに、ビジュアルエディターを使用して、内容を Cloud Service リポジトリにプッシュすることもできます。
 
    ```
       git add .
@@ -207,44 +210,44 @@ Formsas a Cloud Serviceサンドボックスでヘッドレスアダプティブ
       git push origin
    ```
 
-### 5.プログラムのビルドパイプラインを実行します
+### 5. プログラムのビルドパイプラインを実行する
 
 
 
 <table style="table-layout:auto">
 <tr>
   <td>
-  1.にログインする <a href="https://experience.adobe.com/" > https://experience.adobe.com/ </a>  をクリックし、 <b> Experience Manager </b> オプション。
+  1. <a href="https://experience.adobe.com/" >https://experience.adobe.com/</a> にログインし、「<b>Experience Manager</b>」オプションを選択します。
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/cloud-manager-experience-manager.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/cloud-manager-experience-manager.png">
     </a>
     <br>
   </td>
 </tr>
 <tr>
   <td>
-  2. <b> Cloud Manager </b> オプション、クリック <b> を起動します。 </b> 組織のプログラムのリストが表示されます。 プログラムを開きます。 
+  2.「<b>Cloud Manager</b>」オプションの「<b>起動</b>」をクリックします。組織のプログラムのリストが表示されます。プログラムを開きます。 
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/cloud-manager-experience-manager-launch.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/cloud-manager-experience-manager-launch.png">
     </a>
     <br>
   </td>
 </tr>
 <tr>
   <td>
-    3.パイプラインの場合、...アイコンをタップし、 <b> 実行 </b> オプション。 パイプラインを実行するように求められた場合は、をタップします。 <b> 実行 </b> パイプラインを待つ <b> ステータス </b>  に変わる <b> 完了 </b>.  
+    3. パイプラインの「...」アイコンをタップし、「<b>実行</b>」オプションを選択します。パイプラインを実行するように求められた場合は、「<b>実行</b>」をタップし、パイプラインの「<b>ステータス</b>」が<b>完了</b>に変わるまで待ちます。  
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?#create-program">
-      <img alt="AEMas a Cloud Serviceプログラム" src="assets/run-build-pipeline.png">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-program.html?lang=ja#create-program">
+      <img alt="AEM as a Cloud Service プログラム" src="assets/run-build-pipeline.png">
     </a>
     <br>
   </td>
 </tr>
 </table>
 
-これで、ヘッドレスアダプティブフォームを使用する準備が整いました。 これで、フォームの JSON 定義をCloud Service環境にアップロードし、それに基づいてヘッドレスアダプティブフォームを作成し、 [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition/operation/getForm) アプリケーションまたはサービスでヘッドレスアダプティブフォームを使用するための他の rest API も用意されています。
+これで、使用中の環境でヘッドレスアダプティブフォームを使用する準備が整いました。また、フォームの JSON 定義を Cloud Service 環境にアップロードし、それに基づいてヘッドレスアダプティブフォームを作成し、[getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition/operation/getForm) およびその他の REST API を使用してアプリケーションやサービスでヘッドレスアダプティブフォームを使用できるようになりました。
