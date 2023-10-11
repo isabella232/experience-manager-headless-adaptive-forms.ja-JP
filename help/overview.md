@@ -9,9 +9,9 @@ level: Beginner, Intermediate
 keywords: ヘッドレス CMS, アダプティブフォーム, ヘッドレス UI, ヘッドフル CMS, 音声アシスタント, Alexa, チャットボット, WhatsApp アーキテクチャ
 hide: false
 exl-id: 3b5b955b-d59c-43d9-9cc4-3244a08f80dc
-source-git-commit: 47ac7d03c8c4fa18ac3bdcef04352fdd1cad1b16
+source-git-commit: a88f2dab6fda61b674300e1d6a6c4f495ba85c97
 workflow-type: ht
-source-wordcount: '400'
+source-wordcount: '353'
 ht-degree: 100%
 
 ---
@@ -37,6 +37,9 @@ Adobe Experience Manager（AEM）ヘッドレスアダプティブフォーム�
 
 ヘッドレスアダプティブフォームを開発するために、Adobe Experience Manager の事前知識は必要ありません。
 
-## 早期導入プログラムに参加する方法 {#how-to-join-early-adopter-forms}
+<!-- 
+## How to join the early adopter program? {#how-to-join-early-adopter-forms}
 
-このサービスの対象となるのは、AEM Forms as a Cloud Service および AEM 6.5.16.0 Forms 以降のオンプレミスユーザーと Adobe Managed Services のエンタープライズユーザーです。早期導入プログラムに参加するには、ご自身の公式メール ID から [headlessadaptiveforms@adobe.com](mailto:headlessadaptiveforms@adobe.com) にメールを送信してください。
+The service is available for AEM Forms as a Cloud Service and AEM 6.5.16.0 Forms or later On-Premise term customers and Adobe-Managed Service enterprise customers. Send an email to [headlessadaptiveforms@adobe.com](mailto:headlessadaptiveforms@adobe.com) from your official email ID to join the early adopter program. 
+
+-->
