@@ -8,9 +8,9 @@ hide: true
 hidefromtoc: true
 exl-id: ef99ffe9-4a37-4f0a-a4d3-78976c92220f
 source-git-commit: 2332af82ea221086c3b014989651e34726040ba2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2480'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms を使用して、AEM Sites と一貫性のある最新のコアコン
 
 * [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をインストールします。Node.js を初めて使用する場合は、[Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs)を参照してください。
 
-* [アダプティブFormsコアコンポーネントの有効化](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md) AEM Formsas a Cloud Service環境用
+* AEM Forms as a Cloud Service 環境での[アダプティブフォームコアコンポーネントの有効化。](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md)
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/download) または任意のプレーンテキストエディターをインストールします。ドキュメントの例では、Microsoft Visual Studio Code を使用しています。
 
