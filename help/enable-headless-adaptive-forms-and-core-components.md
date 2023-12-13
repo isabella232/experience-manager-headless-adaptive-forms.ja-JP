@@ -5,10 +5,10 @@ description: 詳細な手順ガイドを使用して、AEM 6.5 Forms でヘッ�
 seo-description: Learn how to enable headless adaptive forms on AEM 6.5 Forms with our step-by-step guide. Our tutorial walks you through the process, making it easy to integrate this powerful feature into your website and improve your user experience.
 contentOwner: Khushwant Singh
 role: Admin
-exl-id: c5a7dee1-b177-4461-b9bd-af40ef59ad80
-source-git-commit: f489a2ba818db44ccd92df80a177f0e9f3a1bc2c
+exl-id: e1a5e7e0-d445-4cca-b8d7-693d9531f075
+source-git-commit: 999c3d092d03d7a82363bc94ce79ceb33bf0df7e
 workflow-type: ht
-source-wordcount: '752'
+source-wordcount: '743'
 ht-degree: 100%
 
 ---
@@ -135,9 +135,9 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 ### コアコンポーネントを有効にすると、どのような機能が追加されますか？
 
 
-使用中の環境でアダプティブフォームのコアコンポーネントを有効にすると、空のコアコンポーネントベースのアダプティブフォームテンプレートと Canvas 3.0 テーマが環境に追加されます。使用中の環境でアダプティブフォームのコアコンポーネントを有効にすると、次の操作を実行できます。
+使用中の環境でアダプティブフォームのコアコンポーネントを有効にすると、空のコアコンポーネントベースのアダプティブフォームテンプレートと Canvas 3.0 テーマが環境に追加されます。お使いの環境でアダプティブフォームのコアコンポーネントを有効にすると、次の操作を実行できます。
 
-* コアコンポーネントベースのアダプティブフォームの作成
-* コアコンポーネントベースのアダプティブフォームを作成します。
-* コアコンポーネントベースのアダプティブフォームテンプレート用のカスタムテーマを作成します。
+* コアコンポーネントベースのアダプティブフォームの作成。
+* コアコンポーネントベースのアダプティブフォームテンプレートの作成。
+* コアコンポーネントベースのアダプティブフォームテンプレート用のカスタムテーマの作成。
 * コアコンポーネントベースのアダプティブフォームの JSON 表現を、フォームのヘッドレス表現を必要とするモバイル、web、ネイティブアプリ、サービスなどのチャネルに提供します。
