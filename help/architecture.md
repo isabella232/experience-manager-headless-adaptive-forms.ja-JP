@@ -10,7 +10,7 @@ keywords: ヘッドレス, アダプティブフォーム, アーキテクチャ
 hide: false
 exl-id: ee7096d8-89e2-41e0-85e7-b26457df96fb
 source-git-commit: 48ba054d7ef3b4e27e0b4d6026dfc2475917723e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '893'
 ht-degree: 100%
 

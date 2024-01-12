@@ -9,12 +9,12 @@ hidefromtoc: true
 exl-id: ef99ffe9-4a37-4f0a-a4d3-78976c92220f
 source-git-commit: 2332af82ea221086c3b014989651e34726040ba2
 workflow-type: ht
-source-wordcount: '2480'
+source-wordcount: '2398'
 ht-degree: 100%
 
 ---
 
-# コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築AEM Forms as a Cloud Service のアダプティブフォーム {#build-engaging-forms-using-core-components-and-headless}
+# AEM Forms as a Cloud Service 上でコアコンポーネントとヘッドレスアダプティブフォームを使用して魅力的なフォームを作成する方法 {#build-engaging-forms-using-core-components-and-headless}
 
 ## ラボの概要 {#lab-overview}
 
@@ -134,7 +134,7 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
    1. 「**プレビュー**」をクリックして、エンドユーザーの観点からフォームをプレビューします。
 
-   1. ダミーデータでフォームに入力。
+   1. ダミーデータでフォームに入力します。
 
    1. フォームを送信します。
       ![](/help/assets/screenshot2028125729.png)

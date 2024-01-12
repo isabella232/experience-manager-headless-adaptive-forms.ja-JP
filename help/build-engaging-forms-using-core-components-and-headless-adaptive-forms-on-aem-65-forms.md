@@ -10,15 +10,15 @@ role: Admin, Developer
 level: Beginner, Intermediate
 topic-tags: develop
 hide: true
-exl-id: 46df943c-0622-4b3b-a802-85c39ac6a734
-source-git-commit: 47ac7d03c8c4fa18ac3bdcef04352fdd1cad1b16
+exl-id: 07a71aac-de38-4839-b8d6-b47c3f575eb3
+source-git-commit: 999c3d092d03d7a82363bc94ce79ceb33bf0df7e
 workflow-type: ht
-source-wordcount: '2189'
+source-wordcount: '2130'
 ht-degree: 100%
 
 ---
 
-# コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築AEM 6.5 Forms のアダプティブフォーム {#build-engaging-forms-using-core-components-and-headless}
+# AEM 6.5 Forms 上でコアコンポーネントとヘッドレスアダプティブフォームを使用して魅力的なフォームを作成する方法 {#build-engaging-forms-using-core-components-and-headless}
 
 ## ラボの概要 {#lab-overview}
 
