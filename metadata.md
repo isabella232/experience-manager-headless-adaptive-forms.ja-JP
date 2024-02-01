@@ -7,10 +7,11 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-headless-adaptive-forms.ja-JP
 feature-set: Experience Manager Forms
 hide: true
-source-git-commit: fe2823d56243d4365533e8c70825a9b5d822b0c6
+recommendations: noDisplay
+source-git-commit: 0d411963ac2f191e104144deb882eac9d089aa50
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 93%
+source-wordcount: '53'
+ht-degree: 98%
 
 ---
 
