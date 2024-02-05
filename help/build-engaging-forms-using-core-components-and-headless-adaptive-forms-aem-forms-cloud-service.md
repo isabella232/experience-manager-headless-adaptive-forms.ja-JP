@@ -8,7 +8,7 @@ exl-id: ef99ffe9-4a37-4f0a-a4d3-78976c92220f
 source-git-commit: bcc51bcae3b26cf20e7c0b5b75935bf69a991731
 workflow-type: tm+mt
 source-wordcount: '2452'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -219,12 +219,12 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
      ![](/help/assets/screenshot2028116429.png){width="50%" align="left"}
 
-1. AEM環境でローカルユーザーを作成します。
+1. AEM 環境でローカルユーザーを作成します。
 
    >[!NOTE]
    > ローカルユーザーを作成するには、以下の手順に従います。
-   > に移動します。 `AEM Home` > `Tools` > `Security` > `Users`
-   > ユーザーが forms-users グループのメンバーであることを確認します。
+   > `AEM Home`／`Tools`／`Security`／`Users` に移動します。
+   > ユーザーが forms-users グループのメンバーであることを確認してください。
 
 
 1. コマンドプロンプトウィンドウで、次のコマンドを実行します。
@@ -248,9 +248,9 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
    ![](/help/assets/screenshot2028117229.png)
 
-   上記のコマンドを実行したら、 `webpack compiled` メッセージが表示され、AEMログインページにリダイレクトされます。
+   上記のコマンドを実行したら、 `webpack compiled` メッセージが表示され、AEM ログインページにリダイレクトされます。
 
-1. クリック **ローカルでログイン（管理者タスクのみ）** をAEMログインページに表示します。
+1. AEM ログインページで「**ローカルでログイン（管理者タスクのみ）**」をクリックします。
 1. 作成したローカルユーザーの資格情報を入力すると、フォームがブラウザーのタブに表示されます。
 
    >[!NOTE]
