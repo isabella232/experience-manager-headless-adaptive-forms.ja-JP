@@ -4,13 +4,11 @@ seo-title: Build Engaging Forms Using Core Components and Headless
 description: コアコンポーネントとヘッドレスを使用して魅力的なフォームを構築
 seo-description: Build Engaging Forms Using Core Components and Headless
 topic-tags: develop
-hide: true
-hidefromtoc: true
 exl-id: ef99ffe9-4a37-4f0a-a4d3-78976c92220f
-source-git-commit: 2332af82ea221086c3b014989651e34726040ba2
-workflow-type: ht
-source-wordcount: '2398'
-ht-degree: 100%
+source-git-commit: 428416d61f236396449d26df208bf284a1ad162f
+workflow-type: tm+mt
+source-wordcount: '2452'
+ht-degree: 97%
 
 ---
 
@@ -36,7 +34,7 @@ AEM Forms を使用して、AEM Sites と一貫性のある最新のコアコン
 
 * [Git の最新リリース](https://git-scm.com/downloads)をインストールします。Git を初めて使用する場合は、[Git のインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)を参照してください。
 
-* [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をインストールします。Node.js を初めて使用する場合は、[Node.js のインストール方法](https://nodejs.dev/en/learn/how-to-install-nodejs)を参照してください。
+* [Node.js 16.13.0 以降](https://nodejs.org/ja/download/)をインストールします。Node.js を初めて使用する場合は、[Node.js のインストール方法](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)を参照してください。
 
 * AEM Forms as a Cloud Service 環境での[アダプティブフォームコアコンポーネントの有効化。](enable-headless-adaptive-forms-and-core-components-on-forms-cloud-service.md)
 
@@ -60,10 +58,11 @@ AEM Forms as a Cloud Service 環境に慣れる。
    [https://author-p105303-e986623.adobeaemcloud.com/ui#/aem/aem/start.html](https://author-p105303-e986623.adobeaemcloud.com/ui%23/aem/aem/start.html)
 
 1. Cloud Service オーサー環境にログインします。
+   ![](/help/assets/screenshot2028113829.png){width="50%" align="left"}
 
 1. AEM Forms UI に移動するには、**Forms／フォームとドキュメント**&#x200B;をクリックします。
 
-   ![](/help/assets/screenshot2028113829.png){width="50%" align="left"}
+
 
    ![](/help/assets/screenshot2028113929.png){width="50%" align="left"}
 
@@ -225,6 +224,13 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
      ![](/help/assets/screenshot2028116429.png){width="50%" align="left"}
 
+1. AEM環境でローカルユーザーを作成します。
+
+   >[!NOTE]
+   > ローカルユーザーを作成するには、以下の手順に従います。
+   > に移動します。 `AEM Home` > `Tools` > `Security` > `Users`
+   > ユーザーが forms-users グループのメンバーであることを確認します。
+
 
 1. コマンドプロンプトウィンドウで、次のコマンドを実行します。
 
@@ -247,7 +253,10 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
    ![](/help/assets/screenshot2028117229.png)
 
-   上記のコマンドを実行したら、`webpack compiled` メッセージが表示されるまで待機します。フォームがブラウザータブに表示されます。
+   上記のコマンドを実行したら、 `webpack compiled` メッセージが表示され、AEMログインページにリダイレクトされます。
+
+1. クリック **ローカルでログイン（管理者タスクのみ）** をAEMログインページに表示します。
+1. 作成したローカルユーザーの資格情報を入力すると、フォームがブラウザーのタブに表示されます。
 
    >[!NOTE]
    >
