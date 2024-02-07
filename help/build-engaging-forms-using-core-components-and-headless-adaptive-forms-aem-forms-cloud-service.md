@@ -6,9 +6,9 @@ seo-description: Build Engaging Forms Using Core Components and Headless
 topic-tags: develop
 exl-id: ef99ffe9-4a37-4f0a-a4d3-78976c92220f
 source-git-commit: bcc51bcae3b26cf20e7c0b5b75935bf69a991731
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2452'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -103,7 +103,7 @@ AEM Forms as a Cloud Service 環境に慣れる。
    1. 「**スタイル**」タブをクリックし、「**wknd-theme**」テーマを選択します（下図を参照）。
       ![](/help/assets/screenshot202023-03-0120at206.09.2320pm.png)
 
-   1. 次をクリック： **送信** 」タブで「 **REST エンドポイントに送信** カードを選択し、 **POST要求の URL** フィールドには次のように表示されます。
+   1. 「**送信**」タブをクリックし、「**REST エンドポイントに送信**」カードを選択し、「**POST リクエストの URL**」フィールドで公開 bin を指定します（下図を参照）。
       ![](/help/assets/screenshot202023-03-0120at206.09.5320pm.png)
 
    1. 「**作成**」をクリックします。フォームの名前とタイトルを指定します。例えば、**登録**&#x200B;などです。「**作成**」をクリックします。
@@ -237,7 +237,7 @@ AEM Forms as a Cloud Service 環境に慣れる。
 
    >[!NOTE]
    >
-   > * を使用して npm を更新するように求めるメッセージが表示された場合、 `npm notice Run npm nstall -g npm@9.6.0` コマンドを使用して、メッセージを無視します。
+   > * `npm notice Run npm nstall -g npm@9.6.0` コマンドを使用して npm をアップデートするように求めるメッセージが表示された場合、メッセージを無視します。
    > * ワークブックでの指示がない限り、他の npm コマンドを実行しないでください。
 
 1. 次のコマンドを実行して、フォームをプレビューします。
