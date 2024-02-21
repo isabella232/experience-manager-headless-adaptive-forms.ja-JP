@@ -6,9 +6,9 @@ feature: Adaptive Forms
 role: Developer
 hide: false
 source-git-commit: 6fbc8605163c5f5415cadf5c19c96e1f68a23841
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
