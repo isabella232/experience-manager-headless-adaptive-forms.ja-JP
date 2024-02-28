@@ -10,9 +10,9 @@ keywords: ヘッドレス CMS, アダプティブフォーム, ヘッドレス U
 hide: true
 hidefromtoc: true
 source-git-commit: 78ae6bc3e390d6a8e46d10d3ad3580c4268bf4ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '403'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
