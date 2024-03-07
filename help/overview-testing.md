@@ -9,7 +9,8 @@ level: Beginner, Intermediate
 keywords: ヘッドレス CMS, アダプティブフォーム, ヘッドレス UI, ヘッドフル CMS, 音声アシスタント, Alexa, チャットボット, WhatsApp アーキテクチャ
 hide: true
 hidefromtoc: true
-source-git-commit: 78ae6bc3e390d6a8e46d10d3ad3580c4268bf4ed
+exl-id: f6a383ea-684b-479d-a15f-8ebced75635e
+source-git-commit: 7516095c2074b0b3b5300d75dc9624beb7ffb3f6
 workflow-type: ht
 source-wordcount: '403'
 ht-degree: 100%
@@ -32,6 +33,13 @@ Adobe Experience Manager（AEM）ヘッドレスアダプティブフォーム�
 さらに、任意の UI フレームワークとプログラミング言語を使用して、フォームをレンダリングする独自のコンポーネントを自由に開発できます。すぐに利用可能な React コンポーネントを使用して、ヘッドレスアダプティブフォームをレンダリングすることもできます。
 
 ## 主な機能
+
+<div>
+
+<iframe src="https://new.express.adobe.com/published/urn:aaid:sc:AP:8043685e-6c54-471a-a2ee-b8fcd357668f?promoid=Y69SGM5H&mv=other" style="width:100%; height:100vh; border:none;"></iframe>
+
+</div>
+
 
 <!-- 
 
